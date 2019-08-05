@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repo
+namespace Repo.DAL
 {
-    public class Class1
+    public class RepoFactory
     {
+        public static IRepo GetRepo() => new FileRepo();
     }
 }
