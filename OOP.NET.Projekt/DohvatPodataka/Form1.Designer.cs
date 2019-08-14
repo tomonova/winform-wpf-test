@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblLoadingStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -39,22 +40,34 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
             // 
+            // lblLoadingStatus
+            // 
+            this.lblLoadingStatus.AutoSize = true;
+            this.lblLoadingStatus.Font = new System.Drawing.Font("Copperplate Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoadingStatus.Location = new System.Drawing.Point(279, 335);
+            this.lblLoadingStatus.Name = "lblLoadingStatus";
+            this.lblLoadingStatus.Size = new System.Drawing.Size(0, 17);
+            this.lblLoadingStatus.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblLoadingStatus);
             this.Controls.Add(this.comboBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblLoadingStatus;
     }
 }
 

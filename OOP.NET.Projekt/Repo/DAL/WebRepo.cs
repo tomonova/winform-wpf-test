@@ -15,10 +15,18 @@ namespace Repo.DAL
         {
             using (var webClient = new WebClient())
             {
-                //Dohvati JSON 
-                string rawJSON = webClient.DownloadString("http://world-cup-json-2018.herokuapp.com/matches");
-                List<Match> matchcollection = JsonConvert.DeserializeObject<List<Match>>(rawJSON);
-                return matchcollection;
+                try
+                {
+                    //Dohvati JSON 
+                    string rawJSON = webClient.DownloadString("http://world-cup-json-2018.herokuapp.com/matches");
+                    List<Match> matchcollection = JsonConvert.DeserializeObject<List<Match>>(rawJSON);
+                    return matchcollection;
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
             }
         }
     }

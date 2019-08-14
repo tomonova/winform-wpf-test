@@ -16,10 +16,18 @@ namespace Repo.DAL
         {
             using (StreamReader sr = new StreamReader(_Path))
             {
-                //Dohvati JSON 
-                string rawJSON = sr.ReadToEnd();
-                List<Match> matchcollection = JsonConvert.DeserializeObject<List<Match>>(rawJSON);
-                return matchcollection;
+                try
+                {
+                    //Dohvati JSON 
+                    string rawJSON = sr.ReadToEnd();
+                    List<Match> matchcollection = JsonConvert.DeserializeObject<List<Match>>(rawJSON);
+                    return matchcollection;
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
         }
     }
