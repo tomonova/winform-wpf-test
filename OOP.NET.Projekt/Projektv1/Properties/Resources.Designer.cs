@@ -61,6 +61,15 @@ namespace Projektv1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You can&apos;t have more than 5 favorite players.
+        /// </summary>
+        internal static string FavoriteWarning {
+            get {
+                return ResourceManager.GetString("FavoriteWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         internal static string lblTeamChoserChose {
@@ -75,6 +84,15 @@ namespace Projektv1.Properties {
         internal static string lblTeamChoserWait {
             get {
                 return ResourceManager.GetString("lblTeamChoserWait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pictures|*.bmp;*.jpg;*.jpeg;*.png;|All Files|*.*.
+        /// </summary>
+        internal static string openFileDialog {
+            get {
+                return ResourceManager.GetString("openFileDialog", resourceCulture);
             }
         }
     }

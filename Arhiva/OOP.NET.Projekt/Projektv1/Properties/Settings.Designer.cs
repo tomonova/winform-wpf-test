@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DohvatPodataka.Properties
+namespace Projektv1.Properties
 {
 
 

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DohvatPodataka")]
+[assembly: AssemblyTitle("Projektv1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DohvatPodataka")]
+[assembly: AssemblyProduct("Projektv1")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9414e0b2-121e-41f0-8663-6ac585996e28")]
+[assembly: Guid("0a0a6174-4a65-4e88-b35d-2ac8506638a9")]
 
 // Version information for an assembly consists of the following four values:
 //

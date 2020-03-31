@@ -117,10 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="FavoriteWarning" xml:space="preserve">
+    <value>You can't have more than 5 favorite players</value>
+  </data>
   <data name="lblTeamChoserChose" xml:space="preserve">
     <value />
   </data>
   <data name="lblTeamChoserWait" xml:space="preserve">
     <value>testis</value>
+  </data>
+  <data name="openFileDialog" xml:space="preserve">
+    <value>Pictures|*.bmp;*.jpg;*.jpeg;*.png;|All Files|*.*</value>
   </data>
 </root>
