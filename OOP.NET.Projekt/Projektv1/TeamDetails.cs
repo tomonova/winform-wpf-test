@@ -102,7 +102,10 @@ namespace Projektv1
         private Player.Position dohvatiPozicju(string position)
         {
             Player.Position realPosition;
-            if (Enum.TryParse(position, out realPosition));
+            if (Enum.TryParse(position, out realPosition))
+            {
+                ;
+            }
             else
                 realPosition = Player.Position.Unknown;
 
