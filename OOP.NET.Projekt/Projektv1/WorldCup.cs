@@ -53,10 +53,7 @@ namespace Projektv1
                 timerMain.Tick += TimerMain_Tick;
                 timerMain.Interval = 500;
                 timerMain.Start();
-            }
-            lblTest.BackColor = Color.Transparent;
-            lblTest.BringToFront();
-           
+            }           
         }
 
         private void TimerMain_Tick(object sender, EventArgs e)
