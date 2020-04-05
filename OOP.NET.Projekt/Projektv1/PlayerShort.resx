@@ -201,17 +201,14 @@
   <data name="picBoxFavorite.Location" type="System.Drawing.Point, System.Drawing">
     <value>228, 61</value>
   </data>
-  <data name="lblCaptain.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Britannic Bold, 12pt</value>
+  <data name="&gt;&gt;lblCaptain.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="lblPosition.Text" xml:space="preserve">
     <value>Position</value>
   </data>
   <data name="lblPosition.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblCaptain.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="&gt;&gt;lblPlayerName.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -279,11 +276,11 @@
   <data name="lblPosition.Location" type="System.Drawing.Point, System.Drawing">
     <value>115, 73</value>
   </data>
+  <data name="lblCaptain.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Britannic Bold, 12pt</value>
+  </data>
   <data name="&gt;&gt;picBoxFavorite.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblPosition.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Britannic Bold, 10pt</value>
   </data>
   <data name="picBoxFavorite.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -295,6 +292,9 @@
     <value>True</value>
   </data>
   <data name="lblCaptain.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPosition.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblNumber.TabIndex" type="System.Int32, mscorlib">
@@ -354,14 +354,14 @@
   <data name="&gt;&gt;picBoxFavorite.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lblPosition.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lblPosition.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Britannic Bold, 10pt</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>hr-HR</value>
+    <value>en-US</value>
   </metadata>
   <metadata name="ctxMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

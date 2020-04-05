@@ -22,7 +22,7 @@ namespace Projektv1
         public delegate void FavoriziranjeEventHandler(object sender, EventArgs e);
         public event FavoriziranjeEventHandler Favoriziranje;
 
-        public PlayerShort(string playerName,bool captain,int shirtNumber,Position position, bool favorite)
+        public PlayerShort(string playerName, bool captain, int shirtNumber, Position position, bool favorite)
         {
             InitializeComponent();
             picBoxFavorite.Visible = false;

@@ -42,8 +42,8 @@
             // 
             // flpTeam
             // 
-            resources.ApplyResources(this.flpTeam, "flpTeam");
             this.flpTeam.AllowDrop = true;
+            resources.ApplyResources(this.flpTeam, "flpTeam");
             this.flpTeam.BackColor = System.Drawing.Color.White;
             this.flpTeam.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flpTeam.Name = "flpTeam";
@@ -53,53 +53,54 @@
             // 
             // flpFavorites
             // 
-            resources.ApplyResources(this.flpFavorites, "flpFavorites");
             this.flpFavorites.AllowDrop = true;
             this.flpFavorites.BackColor = System.Drawing.Color.White;
             this.flpFavorites.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.flpFavorites, "flpFavorites");
             this.flpFavorites.Name = "flpFavorites";
             this.flpFavorites.DragDrop += new System.Windows.Forms.DragEventHandler(this.flpFavorites_DragDrop);
             this.flpFavorites.DragOver += new System.Windows.Forms.DragEventHandler(this.flpFavorites_DragOver);
             // 
             // btnStatistika
             // 
-            resources.ApplyResources(this.btnStatistika, "btnStatistika");
             this.btnStatistika.BackColor = System.Drawing.Color.Red;
             this.btnStatistika.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnStatistika.FlatAppearance.BorderSize = 2;
             this.btnStatistika.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnStatistika.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnStatistika, "btnStatistika");
             this.btnStatistika.ForeColor = System.Drawing.Color.White;
             this.btnStatistika.Name = "btnStatistika";
             this.btnStatistika.UseVisualStyleBackColor = false;
+            this.btnStatistika.Click += new System.EventHandler(this.btnStatistika_Click);
             this.btnStatistika.MouseEnter += new System.EventHandler(this.btnStatistika_MouseEnter);
             this.btnStatistika.MouseLeave += new System.EventHandler(this.btnStatistika_MouseLeave);
             this.btnStatistika.MouseHover += new System.EventHandler(this.btnStatistika_MouseHover);
             // 
             // toolStripTeam
             // 
-            resources.ApplyResources(this.toolStripTeam, "toolStripTeam");
             this.toolStripTeam.BackColor = System.Drawing.Color.White;
             this.toolStripTeam.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbPostavke,
             this.tsbIzlaz});
+            resources.ApplyResources(this.toolStripTeam, "toolStripTeam");
             this.toolStripTeam.Name = "toolStripTeam";
             // 
             // tsbPostavke
             // 
-            resources.ApplyResources(this.tsbPostavke, "tsbPostavke");
             this.tsbPostavke.BackColor = System.Drawing.Color.Red;
             this.tsbPostavke.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsbPostavke.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.tsbPostavke, "tsbPostavke");
             this.tsbPostavke.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.tsbPostavke.Name = "tsbPostavke";
             // 
             // tsbIzlaz
             // 
-            resources.ApplyResources(this.tsbIzlaz, "tsbIzlaz");
             this.tsbIzlaz.BackColor = System.Drawing.Color.Red;
             this.tsbIzlaz.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsbIzlaz.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.tsbIzlaz, "tsbIzlaz");
             this.tsbIzlaz.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.tsbIzlaz.Name = "tsbIzlaz";
             // 
@@ -119,8 +120,8 @@
             // 
             // TeamDetails
             // 
-            resources.ApplyResources(this, "$this");
             this.AllowDrop = true;
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projektv1.Resources.Russia2018_Portrait;
             this.Controls.Add(this.lblFavorite);

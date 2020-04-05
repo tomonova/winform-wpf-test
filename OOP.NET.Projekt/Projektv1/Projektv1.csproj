@@ -47,11 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MatchStat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MatchStat.Designer.cs">
+      <DependentUpon>MatchStat.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlayerShort.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PlayerShort.Designer.cs">
       <DependentUpon>PlayerShort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerStat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlayerStat.Designer.cs">
+      <DependentUpon>PlayerStat.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,6 +71,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
     </Compile>
     <Compile Include="TeamChoser.cs">
       <SubType>Form</SubType>
@@ -78,6 +96,9 @@
     <Compile Include="WorldCup.Designer.cs">
       <DependentUpon>WorldCup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MatchStat.resx">
+      <DependentUpon>MatchStat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PlayerShort.en-US.resx">
       <DependentUpon>PlayerShort.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PlayerShort.resx">
       <DependentUpon>PlayerShort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerStat.resx">
+      <DependentUpon>PlayerStat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.en-US.resx" />
     <EmbeddedResource Include="Properties\Resources.hr-HR.resx" />
@@ -102,6 +126,9 @@
     <EmbeddedResource Include="Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeamChoser.en-US.resx">
       <DependentUpon>TeamChoser.cs</DependentUpon>
@@ -169,6 +196,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Russia2018_Portrait.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiFa-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiFaW-512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

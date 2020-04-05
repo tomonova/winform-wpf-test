@@ -221,5 +221,11 @@ namespace Projektv1
         {
             e.Effect = DragDropEffects.Move;
         }
+
+        private void btnStatistika_Click(object sender, EventArgs e)
+        {
+            Statistics stat = new Statistics(playersList, matches, Country);
+            stat.Show();
+        }
     }
 }

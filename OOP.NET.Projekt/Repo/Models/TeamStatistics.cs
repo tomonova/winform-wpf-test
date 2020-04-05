@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Repo.Models
 {
-    public class HomeTeamStatistics
+    public class TeamStatistics
     {
         public string country { get; set; }
         public int attempts_on_goal { get; set; }
@@ -31,15 +30,5 @@ namespace Repo.Models
         public string tactics { get; set; }
         public IList<StartingEleven> starting_eleven { get; set; }
         public IList<Substitute> substitutes { get; set; }
-
-        //public IEnumerator<string> GetEnumerator()
-        //{
-        //    yield return country;
-        //}
-
-        //IEnumerator IEnumerable.GetEnumerator()
-        //{
-        //    return GetEnumerator();
-        //}
     }
 }
