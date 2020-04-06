@@ -209,5 +209,101 @@
   <ItemGroup>
     <None Include="Resources\FiFaW-512.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ARG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AUS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BEL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BRA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CRC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CRO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EGY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ENG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ESP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FRA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IRN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ISL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JPN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KOR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KSA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MEX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NGA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PAN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RUS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SRB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SWE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TUN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\URU.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

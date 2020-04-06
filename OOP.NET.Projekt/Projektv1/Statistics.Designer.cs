@@ -28,20 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Statistics));
             this.flpMatches = new System.Windows.Forms.FlowLayoutPanel();
             this.flpPlayerStat = new System.Windows.Forms.FlowLayoutPanel();
             this.btnGamesPlayed = new System.Windows.Forms.Button();
             this.btnGoals = new System.Windows.Forms.Button();
             this.btnYellowCards = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.picBoxYCards = new System.Windows.Forms.PictureBox();
             this.picBoxGoals = new System.Windows.Forms.PictureBox();
             this.picBoxGamesPlayed = new System.Windows.Forms.PictureBox();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxYCards)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxGoals)).BeginInit();
@@ -50,10 +49,12 @@
             // 
             // flpMatches
             // 
+            this.flpMatches.AutoScroll = true;
             this.flpMatches.BackColor = System.Drawing.Color.Transparent;
-            this.flpMatches.Location = new System.Drawing.Point(802, 14);
+            this.flpMatches.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpMatches.Location = new System.Drawing.Point(802, 5);
             this.flpMatches.Name = "flpMatches";
-            this.flpMatches.Size = new System.Drawing.Size(355, 892);
+            this.flpMatches.Size = new System.Drawing.Size(355, 1010);
             this.flpMatches.TabIndex = 0;
             this.flpMatches.WrapContents = false;
             // 
@@ -63,9 +64,9 @@
             this.flpPlayerStat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flpPlayerStat.BackColor = System.Drawing.Color.Transparent;
             this.flpPlayerStat.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpPlayerStat.Location = new System.Drawing.Point(2, 12);
+            this.flpPlayerStat.Location = new System.Drawing.Point(2, 5);
             this.flpPlayerStat.Name = "flpPlayerStat";
-            this.flpPlayerStat.Size = new System.Drawing.Size(444, 892);
+            this.flpPlayerStat.Size = new System.Drawing.Size(444, 1021);
             this.flpPlayerStat.TabIndex = 0;
             this.flpPlayerStat.WrapContents = false;
             // 
@@ -129,32 +130,31 @@
             this.btnYellowCards.MouseEnter += new System.EventHandler(this.btnYellowCards_MouseEnter);
             this.btnYellowCards.MouseLeave += new System.EventHandler(this.btnYellowCards_MouseLeave);
             // 
-            // button1
+            // btnPrint
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(492, 857);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(268, 47);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "PRINT";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPrint.Location = new System.Drawing.Point(492, 968);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(268, 47);
+            this.btnPrint.TabIndex = 8;
+            this.btnPrint.Text = "PRINT";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // printDialog1
             // 
+            this.printDialog1.AllowCurrentPage = true;
+            this.printDialog1.AllowSomePages = true;
+            this.printDialog1.Document = this.printDocument1;
             this.printDialog1.UseEXDialog = true;
             // 
-            // printPreviewDialog1
+            // printDocument1
             // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
+            this.printDocument1.EndPrint += new System.Drawing.Printing.PrintEventHandler(this.printDocument1_EndPrint);
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // pictureBox4
             // 
@@ -200,13 +200,17 @@
             this.picBoxGamesPlayed.TabIndex = 2;
             this.picBoxGamesPlayed.TabStop = false;
             // 
+            // pageSetupDialog1
+            // 
+            this.pageSetupDialog1.Document = this.printDocument1;
+            // 
             // Statistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(1158, 922);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1158, 1027);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.picBoxYCards);
             this.Controls.Add(this.btnYellowCards);
@@ -239,9 +243,9 @@
         private System.Windows.Forms.PictureBox picBoxYCards;
         private System.Windows.Forms.Button btnYellowCards;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
     }
 }

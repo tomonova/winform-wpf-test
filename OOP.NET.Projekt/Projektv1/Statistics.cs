@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,8 +22,8 @@ namespace Projektv1
         }
 
         private string country;
-        private string code;
         private List<Match> matches;
+        private List<Match> chosenMatches;
         private List<Player> players;
         private List<Ivent> ivents;
         private List<TeamStatistics> teamStat;
@@ -46,6 +47,7 @@ namespace Projektv1
         {
             ivents = new List<Ivent>();
             teamStat = new List<TeamStatistics>();
+            chosenMatches = new List<Match>();
             arrowList = new List<PictureBox>();
             arrowList.Add(picBoxGamesPlayed);
             arrowList.Add(picBoxGoals);
@@ -54,10 +56,51 @@ namespace Projektv1
             LoadEvents();
             LoadTeamStat();
             LoadStat();
-            LoadPanels();
+            LoadStatPanels();
+            LoadMatches();
+            LoadMatchPanels();
+
         }
 
-        private void LoadPanels()
+
+        private void LoadMatches()
+        {
+            foreach (Match match in matches)
+            {
+                if (match.home_team_country==country || match.away_team_country==country)
+                {
+                    Match specificMatch = new Match();
+                    HomeTeam ht = new HomeTeam();
+                    AwayTeam at = new AwayTeam();
+                    ht.country = match.home_team.country;
+                    ht.code = match.home_team.code;
+                    at.country= match.away_team.country;
+                    at.code= match.away_team.code;
+                    specificMatch.venue = match.venue;
+                    specificMatch.attendance = match.attendance;
+                    ht.goals = match.home_team.goals;
+                    at.goals = match.away_team.goals;
+                    specificMatch.home_team = ht;
+                    specificMatch.away_team = at;
+                    chosenMatches.Add(specificMatch);
+                }
+            }
+        }
+        private void LoadMatchPanels()
+        {
+            chosenMatches = chosenMatches.OrderByDescending(m => m.attendance).ToList();
+            foreach (Match match in chosenMatches)
+            {
+                MatchStat ms = new MatchStat(match.home_team.code, match.home_team.country,
+                    match.away_team.code, match.away_team.country,
+                    match.venue, match.home_team.goals,
+                    match.away_team.goals, Convert.ToInt32( match.attendance));
+                    flpMatches.Controls.Add(ms);
+            }
+        }
+
+
+        private void LoadStatPanels()
         {
             flpPlayerStat.Controls.Clear();
             foreach (Player player in players)
@@ -178,14 +221,14 @@ namespace Projektv1
                         _gamesDesc = false;
                         picBoxGamesPlayed.Image = Resources.UpArrow;
                         players=players.OrderBy(p => p.GamesPlayed).ToList();
-                        LoadPanels();
+                        LoadStatPanels();
                     }
                     else if (order==false)
                     {
                         _gamesDesc = true;
                         picBoxGamesPlayed.Image = Resources.DownArrow;
                         players=players.OrderBy(p => -p.GamesPlayed).ToList();
-                        LoadPanels();
+                        LoadStatPanels();
                     }
                     break;
                 case Data.Goals:
@@ -194,14 +237,14 @@ namespace Projektv1
                         _goalsDesc = false;
                         picBoxGoals.Image = Resources.UpArrow;
                         players=players.OrderBy(p => p.Goals).ToList();
-                        LoadPanels();
+                        LoadStatPanels();
                     }
                     else if (order == false)
                     {
                         _goalsDesc = true;
                         picBoxGoals.Image = Resources.DownArrow;
                         players=players.OrderBy(p => -p.Goals).ToList();
-                        LoadPanels();
+                        LoadStatPanels();
                     }
                     break;
                 case Data.YellowCards:
@@ -210,14 +253,14 @@ namespace Projektv1
                         _yCardsDesc = false;
                         picBoxYCards.Image = Resources.UpArrow;
                         players=players.OrderBy(p => p.YellowCards).ToList();
-                        LoadPanels();
+                        LoadStatPanels();
                     }
                     else if (order == false)
                     {
                         _yCardsDesc = true;
                         picBoxYCards.Image = Resources.DownArrow;
                         players=players.OrderBy(p => -p.YellowCards).ToList();
-                        LoadPanels();
+                        LoadStatPanels();
                     }
                     break;
                 default:
@@ -271,6 +314,34 @@ namespace Projektv1
         {
             btnYellowCards.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+        }
+
+        Bitmap bmp;
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            btnPrint.Visible = false;
+            Graphics g = CreateGraphics();
+            bmp = new Bitmap(Size.Width+200,Size.Height+200,g);
+            Graphics mg = Graphics.FromImage(bmp);
+            mg.CopyFromScreen(Location.X, Location.Y,0,0,Size);
+            pageSetupDialog1.Document.DefaultPageSettings.Landscape = true;
+            pageSetupDialog1.Document.DefaultPageSettings.PaperSize = new PaperSize("A3", 1170, 1270);
+            if (printDialog1.ShowDialog()==DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+            
+        }
+        
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bmp, 0, 0);
+            btnPrint.Visible = true;
+        }
+
+        private void printDocument1_EndPrint(object sender, PrintEventArgs e)
+        {
+            MessageBox.Show($"{Properties.Resources.endPrintInfo}");
         }
     }
 }

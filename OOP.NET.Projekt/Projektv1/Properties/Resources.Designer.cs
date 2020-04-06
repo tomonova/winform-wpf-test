@@ -61,6 +61,15 @@ namespace Projektv1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Printing has finished.
+        /// </summary>
+        internal static string endPrintInfo {
+            get {
+                return ResourceManager.GetString("endPrintInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You can&apos;t have more than 5 favorite players.
         /// </summary>
         internal static string FavoriteWarning {

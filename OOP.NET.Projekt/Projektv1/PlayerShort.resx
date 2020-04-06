@@ -177,6 +177,9 @@
   <data name="lblNumber.Text" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="lblPlayerName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="picBoxPlayer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -201,14 +204,17 @@
   <data name="picBoxFavorite.Location" type="System.Drawing.Point, System.Drawing">
     <value>228, 61</value>
   </data>
-  <data name="&gt;&gt;lblCaptain.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="lblCaptain.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Britannic Bold, 12pt</value>
   </data>
   <data name="lblPosition.Text" xml:space="preserve">
     <value>Position</value>
   </data>
   <data name="lblPosition.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblCaptain.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;lblPlayerName.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -234,8 +240,8 @@
   <data name="&gt;&gt;lblPosition.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="lblNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="lblCaptain.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="picBoxPlayer.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -276,11 +282,11 @@
   <data name="lblPosition.Location" type="System.Drawing.Point, System.Drawing">
     <value>115, 73</value>
   </data>
-  <data name="lblCaptain.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Britannic Bold, 12pt</value>
-  </data>
   <data name="&gt;&gt;picBoxFavorite.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblPosition.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Britannic Bold, 10pt</value>
   </data>
   <data name="picBoxFavorite.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -289,12 +295,6 @@
     <value>106, 96</value>
   </data>
   <data name="lblNumber.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblCaptain.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblPosition.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblNumber.TabIndex" type="System.Int32, mscorlib">
@@ -324,8 +324,8 @@
   <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 2, 0, 2</value>
   </data>
-  <data name="lblPlayerName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lblNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;dodajUFavoriteToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -354,8 +354,8 @@
   <data name="&gt;&gt;picBoxFavorite.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lblPosition.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Britannic Bold, 10pt</value>
+  <data name="lblPosition.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
