@@ -13,7 +13,7 @@ using static Repo.Models.Player;
 namespace Projektv1
 {
     public partial class PlayerShort : UserControl , IComparable<PlayerShort>
-    {
+    { 
         public string PlayerName { get; set; }
         public bool Captain { get; set; }
         public int ShirtNumber { get; set; }
@@ -21,6 +21,7 @@ namespace Projektv1
         public bool Favorite { get; set; }
         public delegate void FavoriziranjeEventHandler(object sender, EventArgs e);
         public event FavoriziranjeEventHandler Favoriziranje;
+        public string PicturPath { get; set; }
 
         public PlayerShort(string playerName, bool captain, int shirtNumber, Position position, bool favorite)
         {
@@ -31,6 +32,7 @@ namespace Projektv1
             this.Captain = captain;
             this.ShirtNumber = shirtNumber;
             this.position = position;
+            PicturPath = "default";
         }
 
         private void PlayerShort_Load(object sender, EventArgs e)
@@ -71,6 +73,7 @@ namespace Projektv1
             if (chosenPicture.ShowDialog() == DialogResult.OK)
             {
                 picBoxPlayer.ImageLocation = chosenPicture.FileName;
+                PicturPath = picBoxPlayer.ImageLocation;
             }
         }
 
@@ -83,6 +86,10 @@ namespace Projektv1
             lblNumber.Text = ShirtNumber.ToString();
             lblPlayerName.Text = PlayerName;
             lblPosition.Text = position.ToString();
+            if (PicturPath=="default")
+            {
+                picBoxPlayer.Image = Resources.footballer_silhouette_1;
+            }
         }
         internal void StarOnOFF()
         {

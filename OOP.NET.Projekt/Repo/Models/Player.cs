@@ -21,6 +21,7 @@ namespace Repo.Models
         public int ShirtNumber { get; set; }
         public Position position { get; set; }
         public bool Favorite { get; set; }
+        public string ProfilePic { get; set; }
         public int GamesPlayed
         {
             get { return _gamesPlayed; }

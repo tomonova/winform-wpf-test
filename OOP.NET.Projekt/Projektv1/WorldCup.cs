@@ -67,16 +67,19 @@ namespace Projektv1
 
         private void btnHr_Click(object sender, EventArgs e)
         {
-            UpdateConfig("language","hr-HR");
-            AppSave.LanguageConfSave("hr-HR");
+            SetLanguage("hr-HR");
+        }
+
+        private void SetLanguage(string language)
+        {
+            UpdateConfig("language", language);
+            AppSave.LanguageConfSave(language);
             Application.Restart();
         }
 
         private void btnEn_Click(object sender, EventArgs e)
         {
-            UpdateConfig("language", "en-US");
-            AppSave.LanguageConfSave("en-US");
-            Application.Restart();
+            SetLanguage("en-US");
         }
 
         public void UpdateConfig(string key, string value)

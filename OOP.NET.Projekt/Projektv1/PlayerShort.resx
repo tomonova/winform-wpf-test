@@ -177,9 +177,6 @@
   <data name="lblNumber.Text" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="lblPlayerName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="picBoxPlayer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -291,6 +288,9 @@
   <data name="picBoxFavorite.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="lblNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="picBoxPlayer.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 96</value>
   </data>
@@ -324,8 +324,8 @@
   <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 2, 0, 2</value>
   </data>
-  <data name="lblNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="lblPlayerName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;dodajUFavoriteToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -361,7 +361,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en-US</value>
+    <value>hr-HR</value>
   </metadata>
   <metadata name="ctxMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

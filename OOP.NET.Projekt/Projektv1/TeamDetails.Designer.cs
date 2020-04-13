@@ -33,7 +33,11 @@
             this.flpFavorites = new System.Windows.Forms.FlowLayoutPanel();
             this.btnStatistika = new System.Windows.Forms.Button();
             this.toolStripTeam = new System.Windows.Forms.ToolStrip();
-            this.tsbPostavke = new System.Windows.Forms.ToolStripButton();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.momcadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jezikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hrvatskiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbIzlaz = new System.Windows.Forms.ToolStripButton();
             this.lblTim = new System.Windows.Forms.Label();
             this.lblFavorite = new System.Windows.Forms.Label();
@@ -42,8 +46,8 @@
             // 
             // flpTeam
             // 
-            this.flpTeam.AllowDrop = true;
             resources.ApplyResources(this.flpTeam, "flpTeam");
+            this.flpTeam.AllowDrop = true;
             this.flpTeam.BackColor = System.Drawing.Color.White;
             this.flpTeam.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flpTeam.Name = "flpTeam";
@@ -53,22 +57,22 @@
             // 
             // flpFavorites
             // 
+            resources.ApplyResources(this.flpFavorites, "flpFavorites");
             this.flpFavorites.AllowDrop = true;
             this.flpFavorites.BackColor = System.Drawing.Color.White;
             this.flpFavorites.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.flpFavorites, "flpFavorites");
             this.flpFavorites.Name = "flpFavorites";
             this.flpFavorites.DragDrop += new System.Windows.Forms.DragEventHandler(this.flpFavorites_DragDrop);
             this.flpFavorites.DragOver += new System.Windows.Forms.DragEventHandler(this.flpFavorites_DragOver);
             // 
             // btnStatistika
             // 
+            resources.ApplyResources(this.btnStatistika, "btnStatistika");
             this.btnStatistika.BackColor = System.Drawing.Color.Red;
             this.btnStatistika.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnStatistika.FlatAppearance.BorderSize = 2;
             this.btnStatistika.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnStatistika.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btnStatistika, "btnStatistika");
             this.btnStatistika.ForeColor = System.Drawing.Color.White;
             this.btnStatistika.Name = "btnStatistika";
             this.btnStatistika.UseVisualStyleBackColor = false;
@@ -79,30 +83,67 @@
             // 
             // toolStripTeam
             // 
+            resources.ApplyResources(this.toolStripTeam, "toolStripTeam");
             this.toolStripTeam.BackColor = System.Drawing.Color.White;
             this.toolStripTeam.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbPostavke,
+            this.toolStripDropDownButton1,
             this.tsbIzlaz});
-            resources.ApplyResources(this.toolStripTeam, "toolStripTeam");
             this.toolStripTeam.Name = "toolStripTeam";
             // 
-            // tsbPostavke
+            // toolStripDropDownButton1
             // 
-            this.tsbPostavke.BackColor = System.Drawing.Color.Red;
-            this.tsbPostavke.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbPostavke.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.tsbPostavke, "tsbPostavke");
-            this.tsbPostavke.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
-            this.tsbPostavke.Name = "tsbPostavke";
+            resources.ApplyResources(this.toolStripDropDownButton1, "toolStripDropDownButton1");
+            this.toolStripDropDownButton1.BackColor = System.Drawing.Color.Red;
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.momcadToolStripMenuItem,
+            this.jezikToolStripMenuItem});
+            this.toolStripDropDownButton1.ForeColor = System.Drawing.Color.White;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            // 
+            // momcadToolStripMenuItem
+            // 
+            resources.ApplyResources(this.momcadToolStripMenuItem, "momcadToolStripMenuItem");
+            this.momcadToolStripMenuItem.BackColor = System.Drawing.Color.Red;
+            this.momcadToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.momcadToolStripMenuItem.Name = "momcadToolStripMenuItem";
+            this.momcadToolStripMenuItem.Click += new System.EventHandler(this.momcadToolStripMenuItem_Click);
+            // 
+            // jezikToolStripMenuItem
+            // 
+            resources.ApplyResources(this.jezikToolStripMenuItem, "jezikToolStripMenuItem");
+            this.jezikToolStripMenuItem.BackColor = System.Drawing.Color.Red;
+            this.jezikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.englishToolStripMenuItem,
+            this.hrvatskiToolStripMenuItem});
+            this.jezikToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.jezikToolStripMenuItem.Name = "jezikToolStripMenuItem";
+            // 
+            // englishToolStripMenuItem
+            // 
+            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
+            this.englishToolStripMenuItem.BackColor = System.Drawing.Color.Red;
+            this.englishToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
+            // 
+            // hrvatskiToolStripMenuItem
+            // 
+            resources.ApplyResources(this.hrvatskiToolStripMenuItem, "hrvatskiToolStripMenuItem");
+            this.hrvatskiToolStripMenuItem.BackColor = System.Drawing.Color.Red;
+            this.hrvatskiToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.hrvatskiToolStripMenuItem.Name = "hrvatskiToolStripMenuItem";
+            this.hrvatskiToolStripMenuItem.Click += new System.EventHandler(this.hrvatskiToolStripMenuItem_Click);
             // 
             // tsbIzlaz
             // 
+            resources.ApplyResources(this.tsbIzlaz, "tsbIzlaz");
             this.tsbIzlaz.BackColor = System.Drawing.Color.Red;
             this.tsbIzlaz.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsbIzlaz.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.tsbIzlaz, "tsbIzlaz");
             this.tsbIzlaz.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.tsbIzlaz.Name = "tsbIzlaz";
+            this.tsbIzlaz.Click += new System.EventHandler(this.tsbIzlaz_Click);
             // 
             // lblTim
             // 
@@ -120,8 +161,8 @@
             // 
             // TeamDetails
             // 
-            this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
+            this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projektv1.Resources.Russia2018_Portrait;
             this.Controls.Add(this.lblFavorite);
@@ -146,9 +187,13 @@
         private System.Windows.Forms.FlowLayoutPanel flpFavorites;
         private System.Windows.Forms.Button btnStatistika;
         private System.Windows.Forms.ToolStrip toolStripTeam;
-        private System.Windows.Forms.ToolStripButton tsbPostavke;
         private System.Windows.Forms.ToolStripButton tsbIzlaz;
         private System.Windows.Forms.Label lblTim;
         private System.Windows.Forms.Label lblFavorite;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem momcadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jezikToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hrvatskiToolStripMenuItem;
     }
 }

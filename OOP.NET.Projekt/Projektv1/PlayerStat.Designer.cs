@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayerStat));
             this.picBoxPlayerStat = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
@@ -41,88 +42,50 @@
             // 
             // picBoxPlayerStat
             // 
+            resources.ApplyResources(this.picBoxPlayerStat, "picBoxPlayerStat");
             this.picBoxPlayerStat.Image = global::Projektv1.Resources.footballer_silhouette_1;
             this.picBoxPlayerStat.InitialImage = global::Projektv1.Resources.footballer_silhouette_1;
-            this.picBoxPlayerStat.Location = new System.Drawing.Point(0, 0);
             this.picBoxPlayerStat.Name = "picBoxPlayerStat";
-            this.picBoxPlayerStat.Size = new System.Drawing.Size(63, 53);
-            this.picBoxPlayerStat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxPlayerStat.TabIndex = 0;
             this.picBoxPlayerStat.TabStop = false;
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblName.Location = new System.Drawing.Point(69, 7);
+            resources.ApplyResources(this.lblName, "lblName");
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(45, 17);
-            this.lblName.TabIndex = 1;
-            this.lblName.Text = "Name";
             // 
             // lbl1
             // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbl1.Location = new System.Drawing.Point(69, 27);
+            resources.ApplyResources(this.lbl1, "lbl1");
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(73, 17);
-            this.lbl1.TabIndex = 2;
-            this.lbl1.Text = "Broj igara:";
             // 
             // lblBrojOdigranih
             // 
-            this.lblBrojOdigranih.AutoSize = true;
-            this.lblBrojOdigranih.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblBrojOdigranih.Location = new System.Drawing.Point(139, 27);
+            resources.ApplyResources(this.lblBrojOdigranih, "lblBrojOdigranih");
             this.lblBrojOdigranih.Name = "lblBrojOdigranih";
-            this.lblBrojOdigranih.Size = new System.Drawing.Size(16, 17);
-            this.lblBrojOdigranih.TabIndex = 3;
-            this.lblBrojOdigranih.Text = "0";
             // 
             // lbl2
             // 
-            this.lbl2.AutoSize = true;
-            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbl2.Location = new System.Drawing.Point(164, 27);
+            resources.ApplyResources(this.lbl2, "lbl2");
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(83, 17);
-            this.lbl2.TabIndex = 4;
-            this.lbl2.Text = "Broj golova:";
             // 
             // lblBrojGolova
             // 
-            this.lblBrojGolova.AutoSize = true;
-            this.lblBrojGolova.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblBrojGolova.Location = new System.Drawing.Point(243, 27);
+            resources.ApplyResources(this.lblBrojGolova, "lblBrojGolova");
             this.lblBrojGolova.Name = "lblBrojGolova";
-            this.lblBrojGolova.Size = new System.Drawing.Size(16, 17);
-            this.lblBrojGolova.TabIndex = 5;
-            this.lblBrojGolova.Text = "0";
             // 
             // lbl3
             // 
-            this.lbl3.AutoSize = true;
-            this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbl3.Location = new System.Drawing.Point(265, 27);
+            resources.ApplyResources(this.lbl3, "lbl3");
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(123, 17);
-            this.lbl3.TabIndex = 6;
-            this.lbl3.Text = "Broj žutih kartona:";
             // 
             // lblBrojZutih
             // 
-            this.lblBrojZutih.AutoSize = true;
-            this.lblBrojZutih.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblBrojZutih.Location = new System.Drawing.Point(382, 27);
+            resources.ApplyResources(this.lblBrojZutih, "lblBrojZutih");
             this.lblBrojZutih.Name = "lblBrojZutih";
-            this.lblBrojZutih.Size = new System.Drawing.Size(16, 17);
-            this.lblBrojZutih.TabIndex = 7;
-            this.lblBrojZutih.Text = "0";
             // 
             // PlayerStat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -135,7 +98,6 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.picBoxPlayerStat);
             this.Name = "PlayerStat";
-            this.Size = new System.Drawing.Size(419, 54);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPlayerStat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

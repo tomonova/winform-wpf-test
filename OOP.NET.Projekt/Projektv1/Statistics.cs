@@ -105,7 +105,7 @@ namespace Projektv1
             flpPlayerStat.Controls.Clear();
             foreach (Player player in players)
             {
-                PlayerStat ps = new PlayerStat(player.Name, player.YellowCards, player.Goals, player.GamesPlayed);
+                PlayerStat ps = new PlayerStat(player.Name, player.YellowCards, player.Goals, player.GamesPlayed,player.ProfilePic);
                 flpPlayerStat.Controls.Add(ps);
             }
         }

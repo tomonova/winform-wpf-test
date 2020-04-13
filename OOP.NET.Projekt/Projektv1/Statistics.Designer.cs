@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Statistics));
             this.flpMatches = new System.Windows.Forms.FlowLayoutPanel();
             this.flpPlayerStat = new System.Windows.Forms.FlowLayoutPanel();
             this.btnGamesPlayed = new System.Windows.Forms.Button();
@@ -49,42 +50,26 @@
             // 
             // flpMatches
             // 
-            this.flpMatches.AutoScroll = true;
+            resources.ApplyResources(this.flpMatches, "flpMatches");
             this.flpMatches.BackColor = System.Drawing.Color.Transparent;
-            this.flpMatches.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpMatches.Location = new System.Drawing.Point(802, 5);
             this.flpMatches.Name = "flpMatches";
-            this.flpMatches.Size = new System.Drawing.Size(355, 1010);
-            this.flpMatches.TabIndex = 0;
-            this.flpMatches.WrapContents = false;
             // 
             // flpPlayerStat
             // 
-            this.flpPlayerStat.AutoScroll = true;
-            this.flpPlayerStat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            resources.ApplyResources(this.flpPlayerStat, "flpPlayerStat");
             this.flpPlayerStat.BackColor = System.Drawing.Color.Transparent;
-            this.flpPlayerStat.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpPlayerStat.Location = new System.Drawing.Point(2, 5);
             this.flpPlayerStat.Name = "flpPlayerStat";
-            this.flpPlayerStat.Size = new System.Drawing.Size(444, 1021);
-            this.flpPlayerStat.TabIndex = 0;
-            this.flpPlayerStat.WrapContents = false;
             // 
             // btnGamesPlayed
             // 
+            resources.ApplyResources(this.btnGamesPlayed, "btnGamesPlayed");
             this.btnGamesPlayed.BackColor = System.Drawing.Color.White;
             this.btnGamesPlayed.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnGamesPlayed.FlatAppearance.BorderSize = 0;
             this.btnGamesPlayed.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnGamesPlayed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnGamesPlayed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGamesPlayed.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnGamesPlayed.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnGamesPlayed.Location = new System.Drawing.Point(492, 68);
             this.btnGamesPlayed.Name = "btnGamesPlayed";
-            this.btnGamesPlayed.Size = new System.Drawing.Size(210, 50);
-            this.btnGamesPlayed.TabIndex = 1;
-            this.btnGamesPlayed.Text = "Games Played";
             this.btnGamesPlayed.UseVisualStyleBackColor = false;
             this.btnGamesPlayed.Click += new System.EventHandler(this.btnGamesPlayed_Click);
             this.btnGamesPlayed.MouseEnter += new System.EventHandler(this.btnGamesPlayed_MouseEnter);
@@ -92,19 +77,14 @@
             // 
             // btnGoals
             // 
+            resources.ApplyResources(this.btnGoals, "btnGoals");
             this.btnGoals.BackColor = System.Drawing.Color.White;
             this.btnGoals.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnGoals.FlatAppearance.BorderSize = 0;
             this.btnGoals.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnGoals.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnGoals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGoals.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnGoals.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnGoals.Location = new System.Drawing.Point(492, 143);
             this.btnGoals.Name = "btnGoals";
-            this.btnGoals.Size = new System.Drawing.Size(210, 50);
-            this.btnGoals.TabIndex = 3;
-            this.btnGoals.Text = "Goals Scored";
             this.btnGoals.UseVisualStyleBackColor = false;
             this.btnGoals.Click += new System.EventHandler(this.btnGoals_Click);
             this.btnGoals.MouseEnter += new System.EventHandler(this.btnGoals_MouseEnter);
@@ -112,19 +92,14 @@
             // 
             // btnYellowCards
             // 
+            resources.ApplyResources(this.btnYellowCards, "btnYellowCards");
             this.btnYellowCards.BackColor = System.Drawing.Color.White;
             this.btnYellowCards.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnYellowCards.FlatAppearance.BorderSize = 0;
             this.btnYellowCards.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnYellowCards.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnYellowCards.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnYellowCards.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnYellowCards.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnYellowCards.Location = new System.Drawing.Point(492, 221);
             this.btnYellowCards.Name = "btnYellowCards";
-            this.btnYellowCards.Size = new System.Drawing.Size(210, 50);
-            this.btnYellowCards.TabIndex = 5;
-            this.btnYellowCards.Text = "YellowCards";
             this.btnYellowCards.UseVisualStyleBackColor = false;
             this.btnYellowCards.Click += new System.EventHandler(this.btnYellowCards_Click);
             this.btnYellowCards.MouseEnter += new System.EventHandler(this.btnYellowCards_MouseEnter);
@@ -132,15 +107,9 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            resources.ApplyResources(this.btnPrint, "btnPrint");
             this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPrint.Location = new System.Drawing.Point(492, 968);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(268, 47);
-            this.btnPrint.TabIndex = 8;
-            this.btnPrint.Text = "PRINT";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
@@ -158,46 +127,31 @@
             // 
             // pictureBox4
             // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.Image = global::Projektv1.Resources.FiFaW_512;
             this.pictureBox4.InitialImage = global::Projektv1.Resources.FiFaW_512;
-            this.pictureBox4.Location = new System.Drawing.Point(452, 361);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(344, 380);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
             // 
             // picBoxYCards
             // 
+            resources.ApplyResources(this.picBoxYCards, "picBoxYCards");
             this.picBoxYCards.BackColor = System.Drawing.Color.White;
-            this.picBoxYCards.InitialImage = null;
-            this.picBoxYCards.Location = new System.Drawing.Point(698, 221);
             this.picBoxYCards.Name = "picBoxYCards";
-            this.picBoxYCards.Size = new System.Drawing.Size(62, 50);
-            this.picBoxYCards.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxYCards.TabIndex = 6;
             this.picBoxYCards.TabStop = false;
             // 
             // picBoxGoals
             // 
+            resources.ApplyResources(this.picBoxGoals, "picBoxGoals");
             this.picBoxGoals.BackColor = System.Drawing.Color.White;
-            this.picBoxGoals.InitialImage = null;
-            this.picBoxGoals.Location = new System.Drawing.Point(698, 143);
             this.picBoxGoals.Name = "picBoxGoals";
-            this.picBoxGoals.Size = new System.Drawing.Size(62, 50);
-            this.picBoxGoals.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxGoals.TabIndex = 4;
             this.picBoxGoals.TabStop = false;
             // 
             // picBoxGamesPlayed
             // 
+            resources.ApplyResources(this.picBoxGamesPlayed, "picBoxGamesPlayed");
             this.picBoxGamesPlayed.BackColor = System.Drawing.Color.White;
-            this.picBoxGamesPlayed.InitialImage = null;
-            this.picBoxGamesPlayed.Location = new System.Drawing.Point(698, 68);
             this.picBoxGamesPlayed.Name = "picBoxGamesPlayed";
-            this.picBoxGamesPlayed.Size = new System.Drawing.Size(62, 50);
-            this.picBoxGamesPlayed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxGamesPlayed.TabIndex = 2;
             this.picBoxGamesPlayed.TabStop = false;
             // 
             // pageSetupDialog1
@@ -206,10 +160,9 @@
             // 
             // Statistics
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(1158, 1027);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.picBoxYCards);
@@ -221,8 +174,6 @@
             this.Controls.Add(this.flpPlayerStat);
             this.Controls.Add(this.flpMatches);
             this.Name = "Statistics";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Statistics";
             this.Load += new System.EventHandler(this.Statistics_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxYCards)).EndInit();

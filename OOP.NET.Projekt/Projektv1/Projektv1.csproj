@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LanugageConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LanugageConfirm.Designer.cs">
+      <DependentUpon>LanugageConfirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MatchStat.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,6 +102,21 @@
     <Compile Include="WorldCup.Designer.cs">
       <DependentUpon>WorldCup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="LanugageConfirm.en-US.resx">
+      <DependentUpon>LanugageConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanugageConfirm.hr-HR.resx">
+      <DependentUpon>LanugageConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanugageConfirm.resx">
+      <DependentUpon>LanugageConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchStat.en-US.resx">
+      <DependentUpon>MatchStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchStat.hr-HR.resx">
+      <DependentUpon>MatchStat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MatchStat.resx">
       <DependentUpon>MatchStat.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +128,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PlayerShort.resx">
       <DependentUpon>PlayerShort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerStat.en-US.resx">
+      <DependentUpon>PlayerStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerStat.hr-HR.resx">
+      <DependentUpon>PlayerStat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlayerStat.resx">
       <DependentUpon>PlayerStat.cs</DependentUpon>
@@ -126,6 +153,12 @@
     <EmbeddedResource Include="Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.en-US.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.hr-HR.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Statistics.resx">
       <DependentUpon>Statistics.cs</DependentUpon>

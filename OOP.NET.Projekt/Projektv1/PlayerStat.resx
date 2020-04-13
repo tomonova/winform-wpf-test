@@ -117,4 +117,259 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 17</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblBrojZutih.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;picBoxPlayerStat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblBrojOdigranih.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 27</value>
+  </data>
+  <data name="&gt;&gt;lblName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 27</value>
+  </data>
+  <data name="&gt;&gt;lbl2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="&gt;&gt;lblBrojOdigranih.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblBrojOdigranih.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PlayerStat</value>
+  </data>
+  <data name="&gt;&gt;lbl2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbl3.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;picBoxPlayerStat.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblBrojZutih.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblBrojZutih.Name" xml:space="preserve">
+    <value>lblBrojZutih</value>
+  </data>
+  <data name="lblName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 7</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="lbl2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="lbl1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="&gt;&gt;lbl1.Name" xml:space="preserve">
+    <value>lbl1</value>
+  </data>
+  <data name="lblBrojZutih.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbl3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblBrojZutih.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="&gt;&gt;lblBrojOdigranih.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lbl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblBrojZutih.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblBrojGolova.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbl3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="&gt;&gt;lbl2.Name" xml:space="preserve">
+    <value>lbl2</value>
+  </data>
+  <data name="lblBrojOdigranih.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="&gt;&gt;picBoxPlayerStat.Name" xml:space="preserve">
+    <value>picBoxPlayerStat</value>
+  </data>
+  <data name="picBoxPlayerStat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 53</value>
+  </data>
+  <data name="lblBrojZutih.Location" type="System.Drawing.Point, System.Drawing">
+    <value>382, 27</value>
+  </data>
+  <data name="lblBrojGolova.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 17</value>
+  </data>
+  <data name="&gt;&gt;lblBrojZutih.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lbl2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 27</value>
+  </data>
+  <data name="&gt;&gt;lblBrojGolova.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblBrojGolova.Name" xml:space="preserve">
+    <value>lblBrojGolova</value>
+  </data>
+  <data name="lblBrojOdigranih.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblBrojGolova.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbl1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblName.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="&gt;&gt;lblName.Name" xml:space="preserve">
+    <value>lblName</value>
+  </data>
+  <data name="&gt;&gt;lbl3.Name" xml:space="preserve">
+    <value>lbl3</value>
+  </data>
+  <data name="&gt;&gt;lblBrojOdigranih.Name" xml:space="preserve">
+    <value>lblBrojOdigranih</value>
+  </data>
+  <data name="lbl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 17</value>
+  </data>
+  <data name="lblBrojOdigranih.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 17</value>
+  </data>
+  <data name="&gt;&gt;lblBrojGolova.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 52</value>
+  </data>
+  <data name="picBoxPlayerStat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lblBrojZutih.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 17</value>
+  </data>
+  <data name="lbl1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblBrojGolova.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="picBoxPlayerStat.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblBrojGolova.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picBoxPlayerStat.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblBrojGolova.Location" type="System.Drawing.Point, System.Drawing">
+    <value>243, 27</value>
+  </data>
+  <data name="lbl1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblBrojZutih.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 17</value>
+  </data>
+  <data name="&gt;&gt;lbl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblBrojOdigranih.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lbl3.Text" xml:space="preserve">
+    <value>Broj žutih kartona:</value>
+  </data>
+  <data name="lbl2.Text" xml:space="preserve">
+    <value>Broj golova:</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="picBoxPlayerStat.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="lbl1.Text" xml:space="preserve">
+    <value>Broj igara:</value>
+  </data>
+  <data name="lbl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 27</value>
+  </data>
+  <data name="lblBrojOdigranih.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblBrojGolova.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en-US</value>
+  </metadata>
 </root>

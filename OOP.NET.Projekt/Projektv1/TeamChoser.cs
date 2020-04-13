@@ -18,45 +18,63 @@ namespace Projektv1
     {
         private bool labelAnim = true;
         IRepo RF { get; set; }
+        List<Match> matches;
+        HashSet<Team> timovi;
         public TeamChoser()
         {
             InitializeComponent();
         }
-
-        List<Match> matches;
-
+        public TeamChoser(List<Match> matchesOld,HashSet<Team> teams)
+        {
+            InitializeComponent();
+            this.matches = matchesOld;
+            this.timovi = teams;
+        }
         private async void TeamChoser_Load(object sender, EventArgs e)
         {
-            try
+            if (matches==null)
             {
-                Task<List<Match>> task = new Task<List<Match>>(GetMatches);
-                task.Start();
-                lblTeamChoser.Text = Properties.Resources.lblTeamChoserWait;
-                matches = await task;
+                try
+                {
+                    Task<List<Match>> task = new Task<List<Match>>(GetMatches);
+                    task.Start();
+                    lblTeamChoser.Text = Properties.Resources.lblTeamChoserWait;
+                    matches = await task;
 
-                HashSet<Team> timovi = new HashSet<Team>();
-                foreach (Match match in matches)
-                {
-                    Team tim_home = new Team(match.home_team_country, match.home_team.code);
-                    Team tim_away = new Team(match.away_team_country, match.away_team.code);
-                    timovi.Add(tim_home);
-                    timovi.Add(tim_away);
+                    timovi = new HashSet<Team>();
+                    foreach (Match match in matches)
+                    {
+                        Team tim_home = new Team(match.home_team_country, match.home_team.code);
+                        Team tim_away = new Team(match.away_team_country, match.away_team.code);
+                        timovi.Add(tim_home);
+                        timovi.Add(tim_away);
+                    }
+                    LoadTeams();
                 }
-                foreach (var tim in timovi)
+                catch (Exception ex)
                 {
-                    cmbTeamChoser.Items.Add(tim);
-                }
-                cmbTeamChoser.Sorted = true;
-                labelAnim = false;
-                lblTeamChoser.ForeColor = Color.Black;
-                lblTeamChoser.Text = Properties.Resources.lblTeamChoserChose;
+
+                    MessageBox.Show(ex.Message);
+                } 
             }
-            catch (Exception ex)
+            else
             {
-
-                MessageBox.Show(ex.Message);
+                LoadTeams();
             }
         }
+
+        private void LoadTeams()
+        {
+            foreach (var tim in timovi)
+            {
+                cmbTeamChoser.Items.Add(tim);
+            }
+            cmbTeamChoser.Sorted = true;
+            labelAnim = false;
+            lblTeamChoser.ForeColor = Color.Black;
+            lblTeamChoser.Text = Properties.Resources.lblTeamChoserChose;
+        }
+
         private List<Match> GetMatches()
         {
             RF = RepoFactory.GetRepo();
@@ -68,7 +86,7 @@ namespace Projektv1
         {
             string country = ((Team)cmbTeamChoser.SelectedItem).country.ToString();
             string code = ((Team)cmbTeamChoser.SelectedItem).code.ToString();
-            TeamDetails td = new TeamDetails(matches,country,code);
+            TeamDetails td = new TeamDetails(matches,country,code,timovi);
             td.Show();
             this.Close();
         }
