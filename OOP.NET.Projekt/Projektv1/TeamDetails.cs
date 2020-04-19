@@ -24,6 +24,7 @@ namespace Projektv1
         string Country;
         string Code;
         private PlayerShort _odabraniPS;
+        private readonly int FAVORITE_NUM = 3;
 
         public TeamDetails(List<Match> matches,string country,string code,HashSet<Team> timovi,Team savedTeam)
         {
@@ -63,11 +64,14 @@ namespace Projektv1
 
         private void SaveTeam()
         {
-            savedTeam.Players.Clear();
+
+            savedTeam.Players.Clear(); 
             foreach (PlayerShort item in flpFavorites.Controls)
             {
                 Player testniplayer = new Player(Country, Code, item.PlayerName,item.Favorite);
                 savedTeam.Players.Add(testniplayer);
+                savedTeam.country = testniplayer.country;
+                savedTeam.code = testniplayer.code;
             }
             Repo.DAL.AppSave.TeamSave(savedTeam);
         }
@@ -79,12 +83,15 @@ namespace Projektv1
                 PlayerShort ps = new PlayerShort(player.Name,player.Captain,player.ShirtNumber,player.position,player.Favorite);
                 ps.MouseDown += Ps_MouseDown;
                 ps.Favoriziranje += OnFavoriziranje;
-                foreach (Player savedPlayer in savedTeam.Players)
+                if (savedTeam.Players!=null)
                 {
-                    if (savedPlayer.Name == ps.PlayerName)
+                    foreach (Player savedPlayer in savedTeam.Players)
                     {
-                        ps.Favorite = true;
-                    }
+                        if (savedPlayer.Name == ps.PlayerName)
+                        {
+                            ps.Favorite = true;
+                        }
+                    } 
                 }
                 if (ps.Favorite)
                     flpFavorites.Controls.Add(ps);
@@ -167,7 +174,7 @@ namespace Projektv1
 
         private void SrediFavorite()
         {
-            if (flpFavorites.Controls.Count >= 5)
+            if (flpFavorites.Controls.Count >= FAVORITE_NUM)
             {
                 MessageBox.Show($"{Properties.Resources.FavoriteWarning}");
             }
@@ -279,8 +286,13 @@ namespace Projektv1
 
         private void tsbIzlaz_Click(object sender, EventArgs e)
         {
-            SaveTeam();
-            Application.Exit();
+            LanugageConfirm lc = new LanugageConfirm();
+
+            if (lc.ShowDialog() == DialogResult.OK)
+            {
+                SaveTeam();
+                Application.Exit(); 
+            }
         }
 
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)

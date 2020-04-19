@@ -121,7 +121,7 @@
     <value>Printing has finished</value>
   </data>
   <data name="FavoriteWarning" xml:space="preserve">
-    <value>You can't have more than 5 favorite players</value>
+    <value>You reached maximum number of favorite players</value>
   </data>
   <data name="lblTeamChoserChose" xml:space="preserve">
     <value>Chose your team</value>

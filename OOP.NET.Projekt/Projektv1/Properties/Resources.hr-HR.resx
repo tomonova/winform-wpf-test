@@ -121,7 +121,7 @@
     <value>Printanje završilo</value>
   </data>
   <data name="FavoriteWarning" xml:space="preserve">
-    <value>Ne može da imaš više od pet</value>
+    <value>Maksimum favoriziranih igrača</value>
   </data>
   <data name="lblTeamChoserChose" xml:space="preserve">
     <value>Biraj momčad</value>

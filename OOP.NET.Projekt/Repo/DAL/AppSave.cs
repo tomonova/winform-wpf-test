@@ -79,7 +79,8 @@ namespace Repo.DAL
         }
         public static Team TeamLoad()
         {
-            Team savedTeam = new Team();
+            Team savedTeam = new Team("none","none");
+            savedTeam.Players = new List<Player>();
 
             try
             {
@@ -94,6 +95,7 @@ namespace Repo.DAL
                     if (!(savedTeam is Team)||savedTeam==null)
                     {
                         savedTeam = new Team("none", "none");
+                        savedTeam.Players = new List<Player>();
                     }
                 }
             }
