@@ -73,7 +73,15 @@ namespace Projektv1
                 savedTeam.country = testniplayer.country;
                 savedTeam.code = testniplayer.code;
             }
-            Repo.DAL.AppSave.TeamSave(savedTeam);
+            try
+            {
+                Repo.DAL.AppSave.TeamSave(savedTeam);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void PrikaziIgrace()
@@ -316,7 +324,15 @@ namespace Projektv1
         private void SetLanguage(string language)
         {
             UpdateConfig("language", language);
-            AppSave.LanguageConfSave(language);
+            try
+            {
+                AppSave.LanguageConfSave(language);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
             Application.Restart();
         }
         public void UpdateConfig(string key, string value)

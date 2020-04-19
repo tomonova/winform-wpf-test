@@ -21,7 +21,30 @@ namespace Repo.Models
         public int ShirtNumber { get; set; }
         public Position position { get; set; }
         public bool Favorite { get; set; }
+        public string ProfilePic { get; set; }
+        public int GamesPlayed
+        {
+            get { return _gamesPlayed; }
+            set { _gamesPlayed += value; }
+        }
+        private int _gamesPlayed = 0;
+        public int Goals
+        {
+            get { return _goals; }
+            set { _goals+=value; }
+        }
+        private int _goals = 0;
+        public int YellowCards
+        {
+            get { return _yellowCards; }
+            set { _yellowCards+=value; }
+        }
+        private int _yellowCards = 0;
 
+        public Player()
+        {
+
+        }
 
         public Player(string country, string code,string name,bool captian,int shirtNumber, Position position) : base(country, code)
         {
@@ -29,6 +52,12 @@ namespace Repo.Models
             Captain = captian;
             ShirtNumber = shirtNumber;
             this.position = position;
+        }
+        public Player(string country, string code, string name, bool favorite) : base(country, code)
+        {
+            Name = name;
+            Favorite = favorite;
+
         }
 
         public override bool Equals(object obj)

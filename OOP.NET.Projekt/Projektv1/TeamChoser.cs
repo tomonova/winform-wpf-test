@@ -33,7 +33,14 @@ namespace Projektv1
         }
         private async void TeamChoser_Load(object sender, EventArgs e)
         {
-            savedTeam = Repo.DAL.AppSave.TeamLoad();
+            try
+            {
+                savedTeam = Repo.DAL.AppSave.TeamLoad();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             if (matches==null&&savedTeam.country=="none")
             {
                 await DataLoad();

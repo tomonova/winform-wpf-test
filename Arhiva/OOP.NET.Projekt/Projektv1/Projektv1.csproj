@@ -47,11 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LanugageConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LanugageConfirm.Designer.cs">
+      <DependentUpon>LanugageConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchStat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MatchStat.Designer.cs">
+      <DependentUpon>MatchStat.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlayerShort.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PlayerShort.Designer.cs">
       <DependentUpon>PlayerShort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerStat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlayerStat.Designer.cs">
+      <DependentUpon>PlayerStat.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,6 +77,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
     </Compile>
     <Compile Include="TeamChoser.cs">
       <SubType>Form</SubType>
@@ -78,6 +102,24 @@
     <Compile Include="WorldCup.Designer.cs">
       <DependentUpon>WorldCup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="LanugageConfirm.en-US.resx">
+      <DependentUpon>LanugageConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanugageConfirm.hr-HR.resx">
+      <DependentUpon>LanugageConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanugageConfirm.resx">
+      <DependentUpon>LanugageConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchStat.en-US.resx">
+      <DependentUpon>MatchStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchStat.hr-HR.resx">
+      <DependentUpon>MatchStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchStat.resx">
+      <DependentUpon>MatchStat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PlayerShort.en-US.resx">
       <DependentUpon>PlayerShort.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +128,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PlayerShort.resx">
       <DependentUpon>PlayerShort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerStat.en-US.resx">
+      <DependentUpon>PlayerStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerStat.hr-HR.resx">
+      <DependentUpon>PlayerStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerStat.resx">
+      <DependentUpon>PlayerStat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.en-US.resx" />
     <EmbeddedResource Include="Properties\Resources.hr-HR.resx" />
@@ -102,6 +153,15 @@
     <EmbeddedResource Include="Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.en-US.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.hr-HR.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeamChoser.en-US.resx">
       <DependentUpon>TeamChoser.cs</DependentUpon>
@@ -169,6 +229,114 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Russia2018_Portrait.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiFa-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiFaW-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ARG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AUS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BEL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BRA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CRC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CRO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EGY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ENG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ESP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FRA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IRN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ISL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JPN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KOR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KSA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MEX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NGA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PAN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RUS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SRB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SWE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TUN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\URU.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -336,12 +336,13 @@ namespace Projektv1
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(bmp, 0, 0);
-            btnPrint.Visible = true;
+
         }
 
         private void printDocument1_EndPrint(object sender, PrintEventArgs e)
         {
             MessageBox.Show($"{Properties.Resources.endPrintInfo}");
+            btnPrint.Visible = true;
         }
     }
 }

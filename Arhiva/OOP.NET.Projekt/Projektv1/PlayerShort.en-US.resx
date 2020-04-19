@@ -119,12 +119,18 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ctxMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 70</value>
+    <value>131, 48</value>
   </data>
-  <data name="lblPlayerName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 16</value>
+  <data name="postaviSlikuToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 22</value>
   </data>
-  <data name="lblPosition.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 16</value>
+  <data name="postaviSlikuToolStripMenuItem.Text" xml:space="preserve">
+    <value>Set Picture</value>
+  </data>
+  <data name="dodajUFavoriteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 22</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 99</value>
   </data>
 </root>

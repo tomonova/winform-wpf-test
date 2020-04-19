@@ -117,8 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="endPrintInfo" xml:space="preserve">
+    <value>Printanje završilo</value>
+  </data>
   <data name="FavoriteWarning" xml:space="preserve">
-    <value>Ne može da imaš više od pet</value>
+    <value>Maksimum favoriziranih igrača</value>
   </data>
   <data name="lblTeamChoserChose" xml:space="preserve">
     <value>Biraj momčad</value>

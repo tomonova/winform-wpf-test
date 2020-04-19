@@ -54,22 +54,22 @@
             // 
             // ctxMenu
             // 
+            resources.ApplyResources(this.ctxMenu, "ctxMenu");
             this.ctxMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.postaviSlikuToolStripMenuItem,
             this.dodajUFavoriteToolStripMenuItem});
             this.ctxMenu.Name = "ctxMenu";
-            resources.ApplyResources(this.ctxMenu, "ctxMenu");
             // 
             // postaviSlikuToolStripMenuItem
             // 
-            this.postaviSlikuToolStripMenuItem.Name = "postaviSlikuToolStripMenuItem";
             resources.ApplyResources(this.postaviSlikuToolStripMenuItem, "postaviSlikuToolStripMenuItem");
+            this.postaviSlikuToolStripMenuItem.Name = "postaviSlikuToolStripMenuItem";
             this.postaviSlikuToolStripMenuItem.Click += new System.EventHandler(this.postaviSlikuToolStripMenuItem_Click);
             // 
             // dodajUFavoriteToolStripMenuItem
             // 
-            this.dodajUFavoriteToolStripMenuItem.Name = "dodajUFavoriteToolStripMenuItem";
             resources.ApplyResources(this.dodajUFavoriteToolStripMenuItem, "dodajUFavoriteToolStripMenuItem");
+            this.dodajUFavoriteToolStripMenuItem.Name = "dodajUFavoriteToolStripMenuItem";
             this.dodajUFavoriteToolStripMenuItem.Click += new System.EventHandler(this.dodajUFavoriteToolStripMenuItem_Click);
             // 
             // lblPlayerName
@@ -93,19 +93,19 @@
             // 
             // picBoxFavorite
             // 
+            resources.ApplyResources(this.picBoxFavorite, "picBoxFavorite");
             this.picBoxFavorite.ContextMenuStrip = this.ctxMenu;
             this.picBoxFavorite.Image = global::Projektv1.Resources.golden_star;
-            resources.ApplyResources(this.picBoxFavorite, "picBoxFavorite");
             this.picBoxFavorite.Name = "picBoxFavorite";
             this.picBoxFavorite.TabStop = false;
             // 
             // picBoxPlayer
             // 
+            resources.ApplyResources(this.picBoxPlayer, "picBoxPlayer");
             this.picBoxPlayer.BackColor = System.Drawing.Color.White;
             this.picBoxPlayer.BackgroundImage = global::Projektv1.Resources.footballer_silhouette_1;
             this.picBoxPlayer.ContextMenuStrip = this.ctxMenu;
             this.picBoxPlayer.Image = global::Projektv1.Resources.footballer_silhouette_1;
-            resources.ApplyResources(this.picBoxPlayer, "picBoxPlayer");
             this.picBoxPlayer.InitialImage = global::Projektv1.Resources.footballer_silhouette_1;
             this.picBoxPlayer.Name = "picBoxPlayer";
             this.picBoxPlayer.TabStop = false;

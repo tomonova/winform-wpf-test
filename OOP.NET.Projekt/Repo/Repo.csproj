@@ -58,7 +58,6 @@
     <Compile Include="Models\AwayTeam.cs" />
     <Compile Include="Models\AwayTeamEvent.cs" />
     <Compile Include="Models\AwayTeamStatistics.cs" />
-    <Compile Include="Models\ChoiceSave.cs" />
     <Compile Include="Models\Ivent.cs" />
     <Compile Include="Models\Match.cs" />
     <Compile Include="Models\HomeTeam.cs" />

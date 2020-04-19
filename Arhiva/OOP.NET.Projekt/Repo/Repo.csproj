@@ -55,10 +55,11 @@
     <Compile Include="DAL\IRepo.cs" />
     <Compile Include="DAL\RepoFactory.cs" />
     <Compile Include="DAL\WebRepo.cs" />
-    <Compile Include="Exceptions\ApiException.cs" />
     <Compile Include="Models\AwayTeam.cs" />
     <Compile Include="Models\AwayTeamEvent.cs" />
     <Compile Include="Models\AwayTeamStatistics.cs" />
+    <Compile Include="Models\ChoiceSave.cs" />
+    <Compile Include="Models\Ivent.cs" />
     <Compile Include="Models\Match.cs" />
     <Compile Include="Models\HomeTeam.cs" />
     <Compile Include="Models\HomeTeamEvent.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Models\StartingEleven.cs" />
     <Compile Include="Models\Substitute.cs" />
     <Compile Include="Models\Team.cs" />
+    <Compile Include="Models\TeamStatistics.cs" />
     <Compile Include="Models\Weather.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Tools.cs" />

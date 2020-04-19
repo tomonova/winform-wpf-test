@@ -38,6 +38,8 @@ namespace Projektv1
         private void PlayerShort_Load(object sender, EventArgs e)
         {
             UcitajPodatke();
+            foreach (Control control in this.Controls)
+                control.ContextMenuStrip = ctxMenu;
         }
 
         private void postaviSlikuToolStripMenuItem_Click(object sender, EventArgs e)
