@@ -328,7 +328,15 @@ namespace Projektv1
             pageSetupDialog1.Document.DefaultPageSettings.PaperSize = new PaperSize("A3", 1170, 1270);
             if (printDialog1.ShowDialog()==DialogResult.OK)
             {
-                printDocument1.Print();
+                try
+                {
+                    printDocument1.Print();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    btnPrint.Visible = true;
+                }
             }
             
         }
