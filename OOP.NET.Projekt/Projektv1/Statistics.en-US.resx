@@ -117,10 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Statistic</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="flpMatches.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 946</value>
   </data>
-  <data name="btnYellowCards.Text" xml:space="preserve">
-    <value>Yellow Cards</value>
+  <data name="flpPlayerStat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 946</value>
+  </data>
+  <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>492, 875</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1158, 952</value>
   </data>
 </root>

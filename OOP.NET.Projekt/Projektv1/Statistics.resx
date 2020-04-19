@@ -225,6 +225,9 @@
   <data name="&gt;&gt;btnGoals.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;picBoxGamesPlayed.Name" xml:space="preserve">
+    <value>picBoxGamesPlayed</value>
+  </data>
   <data name="&gt;&gt;printDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PrintDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -243,8 +246,8 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="btnGoals.Text" xml:space="preserve">
-    <value>Goals Scored</value>
+  <data name="picBoxYCards.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
   <data name="picBoxGoals.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -261,8 +264,8 @@
   <data name="picBoxYCards.Location" type="System.Drawing.Point, System.Drawing">
     <value>698, 221</value>
   </data>
-  <data name="flpMatches.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 1010</value>
+  <data name="btnGoals.Text" xml:space="preserve">
+    <value>Goals Scored</value>
   </data>
   <data name="&gt;&gt;flpPlayerStat.Parent" xml:space="preserve">
     <value>$this</value>
@@ -270,14 +273,11 @@
   <data name="&gt;&gt;flpMatches.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;picBoxGoals.Name" xml:space="preserve">
-    <value>picBoxGoals</value>
-  </data>
   <data name="btnPrint.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 47</value>
   </data>
-  <data name="picBoxYCards.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
+  <data name="flpMatches.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 1010</value>
   </data>
   <data name="&gt;&gt;btnYellowCards.Parent" xml:space="preserve">
     <value>$this</value>
@@ -314,9 +314,6 @@
   </data>
   <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="picBoxYCards.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="picBoxGamesPlayed.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -393,8 +390,8 @@
   <data name="&gt;&gt;btnGamesPlayed.Name" xml:space="preserve">
     <value>btnGamesPlayed</value>
   </data>
-  <data name="&gt;&gt;flpPlayerStat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="picBoxYCards.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="flpPlayerStat.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
     <value>TopDown</value>
@@ -432,8 +429,11 @@
   <data name="picBoxGoals.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 50</value>
   </data>
-  <data name="&gt;&gt;picBoxGamesPlayed.Name" xml:space="preserve">
-    <value>picBoxGamesPlayed</value>
+  <data name="&gt;&gt;picBoxGoals.Name" xml:space="preserve">
+    <value>picBoxGoals</value>
+  </data>
+  <data name="&gt;&gt;flpPlayerStat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnGoals.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15pt, style=Bold</value>

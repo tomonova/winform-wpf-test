@@ -20,6 +20,7 @@ namespace Projektv1
         IRepo RF { get; set; }
         List<Match> matches;
         HashSet<Team> timovi;
+        Team savedTeam;
         public TeamChoser()
         {
             InitializeComponent();
@@ -32,30 +33,20 @@ namespace Projektv1
         }
         private async void TeamChoser_Load(object sender, EventArgs e)
         {
-            if (matches==null)
+            savedTeam = Repo.DAL.AppSave.TeamLoad();
+            if (matches==null&&savedTeam.country=="none")
             {
-                try
-                {
-                    Task<List<Match>> task = new Task<List<Match>>(GetMatches);
-                    task.Start();
-                    lblTeamChoser.Text = Properties.Resources.lblTeamChoserWait;
-                    matches = await task;
+                await DataLoad();
+            }
+            else if (matches==null&&savedTeam.country!="none")
+            {
+                await DataLoad();
+                string country = savedTeam.country;
+                string code = savedTeam.code;
+                TeamDetails td = new TeamDetails(matches, country, code, timovi,savedTeam);
+                td.Show();
+                this.Close();
 
-                    timovi = new HashSet<Team>();
-                    foreach (Match match in matches)
-                    {
-                        Team tim_home = new Team(match.home_team_country, match.home_team.code);
-                        Team tim_away = new Team(match.away_team_country, match.away_team.code);
-                        timovi.Add(tim_home);
-                        timovi.Add(tim_away);
-                    }
-                    LoadTeams();
-                }
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show(ex.Message);
-                } 
             }
             else
             {
@@ -63,8 +54,33 @@ namespace Projektv1
             }
         }
 
+        private async Task DataLoad()
+        {
+            try
+            {
+                Task<List<Match>> task = new Task<List<Match>>(GetMatches);
+                task.Start();
+                lblTeamChoser.Text = Properties.Resources.lblTeamChoserWait;
+                matches = await task;
+                LoadTeams();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void LoadTeams()
         {
+            timovi = new HashSet<Team>();
+            foreach (Match match in matches)
+            {
+                Team tim_home = new Team(match.home_team_country, match.home_team.code);
+                Team tim_away = new Team(match.away_team_country, match.away_team.code);
+                timovi.Add(tim_home);
+                timovi.Add(tim_away);
+            }
             foreach (var tim in timovi)
             {
                 cmbTeamChoser.Items.Add(tim);
@@ -86,7 +102,7 @@ namespace Projektv1
         {
             string country = ((Team)cmbTeamChoser.SelectedItem).country.ToString();
             string code = ((Team)cmbTeamChoser.SelectedItem).code.ToString();
-            TeamDetails td = new TeamDetails(matches,country,code,timovi);
+            TeamDetails td = new TeamDetails(matches,country,code,timovi,savedTeam);
             td.Show();
             this.Close();
         }

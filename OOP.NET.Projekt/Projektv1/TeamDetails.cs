@@ -12,6 +12,7 @@ using System.Xml;
 using Repo.DAL;
 using Repo.Models;
 
+
 namespace Projektv1
 {
     public partial class TeamDetails : Form
@@ -19,17 +20,19 @@ namespace Projektv1
         List<Match> matches;
         List<Player> playersList;
         HashSet<Team> teams;
+        Team savedTeam; 
         string Country;
         string Code;
         private PlayerShort _odabraniPS;
 
-        public TeamDetails(List<Match> matches,string country,string code,HashSet<Team> timovi)
+        public TeamDetails(List<Match> matches,string country,string code,HashSet<Team> timovi,Team savedTeam)
         {
             InitializeComponent();
             Country = country;
             Code = code;
             teams = timovi;
             this.matches = matches;
+            this.savedTeam = savedTeam;
         }
 
 
@@ -58,6 +61,17 @@ namespace Projektv1
             _odabraniPS = null;
         }
 
+        private void SaveTeam()
+        {
+            savedTeam.Players.Clear();
+            foreach (PlayerShort item in flpFavorites.Controls)
+            {
+                Player testniplayer = new Player(Country, Code, item.PlayerName,item.Favorite);
+                savedTeam.Players.Add(testniplayer);
+            }
+            Repo.DAL.AppSave.TeamSave(savedTeam);
+        }
+
         private void PrikaziIgrace()
         {
             foreach (var player in playersList)
@@ -65,7 +79,14 @@ namespace Projektv1
                 PlayerShort ps = new PlayerShort(player.Name,player.Captain,player.ShirtNumber,player.position,player.Favorite);
                 ps.MouseDown += Ps_MouseDown;
                 ps.Favoriziranje += OnFavoriziranje;
-                if (player.Favorite)
+                foreach (Player savedPlayer in savedTeam.Players)
+                {
+                    if (savedPlayer.Name == ps.PlayerName)
+                    {
+                        ps.Favorite = true;
+                    }
+                }
+                if (ps.Favorite)
                     flpFavorites.Controls.Add(ps);
                 else
                 {
@@ -79,7 +100,6 @@ namespace Projektv1
             PlayerShort ps = sender as PlayerShort;
             _odabraniPS = ps;
             ps.DoDragDrop(42, DragDropEffects.Move);
-            
         }
 
         private void UcitajIgrace()
@@ -203,6 +223,7 @@ namespace Projektv1
             {
                 flpFavorites.Controls.Add(item);
             }
+            SaveTeam();
         }
 
         private void flpFavorites_DragDrop(object sender, DragEventArgs e)
@@ -258,6 +279,7 @@ namespace Projektv1
 
         private void tsbIzlaz_Click(object sender, EventArgs e)
         {
+            SaveTeam();
             Application.Exit();
         }
 

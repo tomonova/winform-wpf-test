@@ -41,6 +41,10 @@ namespace Repo.Models
         }
         private int _yellowCards = 0;
 
+        public Player()
+        {
+
+        }
 
         public Player(string country, string code,string name,bool captian,int shirtNumber, Position position) : base(country, code)
         {
@@ -48,6 +52,12 @@ namespace Repo.Models
             Captain = captian;
             ShirtNumber = shirtNumber;
             this.position = position;
+        }
+        public Player(string country, string code, string name, bool favorite) : base(country, code)
+        {
+            Name = name;
+            Favorite = favorite;
+
         }
 
         public override bool Equals(object obj)
