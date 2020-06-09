@@ -60,6 +60,15 @@ namespace Repo.Models
 
         }
 
+        public Player(string country, string code, string playerName, bool favorite, string picturPath)
+        {
+            this.country = country;
+            this.code = code;
+            this.Name = playerName;
+            Favorite = favorite;
+            this.ProfilePic = picturPath;
+        }
+
         public override bool Equals(object obj)
         {
             if (obj == null)

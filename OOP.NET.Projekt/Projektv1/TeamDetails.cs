@@ -68,7 +68,7 @@ namespace Projektv1
             savedTeam.Players.Clear(); 
             foreach (PlayerShort item in flpFavorites.Controls)
             {
-                Player testniplayer = new Player(Country, Code, item.PlayerName,item.Favorite);
+                Player testniplayer = new Player(Country, Code, item.PlayerName, item.Favorite, item.PicturPath);
                 savedTeam.Players.Add(testniplayer);
                 savedTeam.country = testniplayer.country;
                 savedTeam.code = testniplayer.code;
