@@ -1,21 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
 using System.Linq;
 using System.Resources;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Repo.DAL;
 using Repo.Models;
 using WPFProjektv1.Properties;
@@ -32,9 +23,16 @@ namespace WPFProjektv1
         List<Match> matches;
         HashSet<Team> timovi;
         Team selectedTeam;
+        private string chosenTeam;
+        private HashSet<Team> chosenTeams;
+        ResourceManager rm;
+        string size = "minimum";
+
+
         public MainWindow()
         {
             InitializeComponent();
+            rm = new ResourceManager(typeof(Resources));    
         }
 
 
@@ -52,11 +50,32 @@ namespace WPFProjektv1
             AppSave.LanguageConfSave(Culture);
         }
 
-        private async void Window_Loaded (object sender, RoutedEventArgs e)
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-           // PokreniAnimaciju();
+            size = AppSave.SizeConfLoad();
+            SetSize(size);
+            PokreniAnimaciju();
             await DataLoad();
         }
+
+        private void SetSize(string size)
+        {
+            switch (size)
+            {
+                case "minimum":
+                    setMinimum();
+                    break;
+                case "medium":
+                    setMedium();
+                    break;
+                case "fullscreen":
+                    setFullScreen();
+                    break;
+                default:
+                    break;
+            };
+        }
+
         private async Task DataLoad()
         {
             try
@@ -89,14 +108,14 @@ namespace WPFProjektv1
             }
             foreach (var tim in timovi)
             {
-                 cmbHomeTeam.Items.Add(tim);
+                cmbHomeTeam.Items.Add(tim);
             }
-            //ZaustaviAnimaciju();
+            ZaustaviAnimaciju();
         }
 
         private void ZaustaviAnimaciju()
         {
-            ResourceManager rm = new ResourceManager(typeof(Resources));
+
             btnStory.Stop();
             lblPleaseWait.Content = rm.GetString("MainWindow.Label_PleaseWat_Loaded");
         }
@@ -111,32 +130,147 @@ namespace WPFProjektv1
         private void cmbHomeTeam_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             selectedTeam = (Team)cmbHomeTeam.SelectedItem;
-            //FindOpponents(selectedTeam);
+            removeEntriesOpponent();
+            FindOpponents(selectedTeam);
+        }
+
+        private void removeEntriesOpponent()
+        {
+            cmbAwayTeam.Items.Clear();
         }
 
         private void FindOpponents(Team selectedTeam)
         {
-            throw new NotImplementedException();
+            chosenTeam = cmbHomeTeam.SelectedValue.ToString().Split().Last();
+            FindAwayTeams(chosenTeam);
         }
 
-        private void Window_Initialized(object sender, EventArgs e)
+        private void FindAwayTeams(string chosenTeam)
         {
-            Culture = "";
-            try
+            chosenTeams = new HashSet<Team>();
+            LoadMatches(chosenTeam);
+        }
+
+        private void LoadMatches(string chosenTeam)
+        {
+            foreach (Match match in matches)
             {
-                Culture = AppSave.LanguageConfLoad();
-                if (Culture != "")
+                if (match.home_team.code == chosenTeam || match.away_team.code == chosenTeam)
                 {
-                    App.ChangeCulture(new CultureInfo(Culture));
+                    Match specificMatch = new Match();
+                    Team homeTeam = new Team();
+                    Team awayTeam = new Team();
+                    homeTeam.country = match.home_team.country;
+                    homeTeam.code = match.home_team.code;
+                    awayTeam.country = match.away_team.country;
+                    awayTeam.code = match.away_team.code;
+                    if (homeTeam.country != chosenTeam || awayTeam.country != chosenTeam)
+                    {
+                        chosenTeams.Add(homeTeam);
+                        chosenTeams.Add(awayTeam);
+                    }
+
                 }
             }
-            catch (FileNotFoundException)
+            foreach (Team team in chosenTeams)
             {
-                Culture = "error";
+                if (team.code != chosenTeam)
+                {
+                    cmbAwayTeam.Items.Add(team);
+                }
             }
-            catch (Exception ex)
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(cmbAwayTeam.Text) || string.IsNullOrEmpty(cmbHomeTeam.Text))
             {
-                MessageBox.Show($"Error:\n {ex.Message}");
+                MessageBox.Show(rm.GetString("MainWindow.TeamsNotChosenMessage"));
+                return;
+            }
+            string chosenOpponent = cmbAwayTeam.SelectedItem.ToString().Split().Last();
+            MatchWindow mw = new MatchWindow(matches, chosenTeam, chosenOpponent);
+            mw.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            setMinimum();
+        }
+
+        private void setMinimum()
+        {
+            mainWindow.WindowState = WindowState.Normal;
+            mainWindow.Width = 835;
+            mainWindow.Height = 575;
+            btnBall.Width = 50;
+            btnBall.Height = 50;
+            btnCro.Width = 40;
+            btnCro.Height = 36;
+            btnEng.Width = 40;
+            btnEng.Height = 35;
+            btnEng.Margin = new Thickness(0, 10, 70, 0);
+            string size = "minimum";
+            CenterWindowOnScreen();
+            AppSave.ScreenSave(size);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            setMedium();
+        }
+
+        private void setMedium()
+        {
+            mainWindow.WindowState = WindowState.Normal;
+            mainWindow.Width = 1024;
+            mainWindow.Height = 768;
+            btnBall.Width = 75;
+            btnBall.Height = 75;
+            btnCro.Width = 70;
+            btnCro.Height = 62;
+            btnEng.Width = 70;
+            btnEng.Height = 62;
+            btnEng.Margin = new Thickness(0, 10, 115, 0);
+            string size = "medium"; CenterWindowOnScreen();
+            AppSave.ScreenSave(size);
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            setFullScreen();
+        }
+
+        private void setFullScreen()
+        {
+            mainWindow.WindowState = WindowState.Maximized;
+            btnBall.Width = 120;
+            btnBall.Height = 120;
+            btnCro.Width = 95;
+            btnCro.Height = 85;
+            btnEng.Width = 95;
+            btnEng.Height = 85;
+            btnEng.Margin = new Thickness(0, 10, 180, 0);
+            string size = "fullscreen";
+            AppSave.ScreenSave(size);
+        }
+
+        private void CenterWindowOnScreen()
+        {
+            double screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
+            double screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
+            double windowWidth = this.Width;
+            double windowHeight = this.Height;
+            this.Left = (screenWidth / 2) - (windowWidth / 2);
+            this.Top = (screenHeight / 2) - (windowHeight / 2);
+        }
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            DialogBox db = new DialogBox();
+            db.ShowDialog();
+            if (db.DialogResult==true)
+            {
+                this.Close();
             }
         }
     }

@@ -70,7 +70,25 @@ namespace WPFProjektv1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Away Team.
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        public static string MainWindow_Btton_Exit {
+            get {
+                return ResourceManager.GetString("MainWindow_Btton_Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to exit?.
+        /// </summary>
+        public static string MainWindow_Closing {
+            get {
+                return ResourceManager.GetString("MainWindow.Closing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oponent.
         /// </summary>
         public static string MainWindow_Label_AwayTeam {
             get {
@@ -79,7 +97,7 @@ namespace WPFProjektv1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Home Team.
+        ///   Looks up a localized string similar to Chosen Team.
         /// </summary>
         public static string MainWindow_Label_HomeTeam {
             get {
@@ -93,6 +111,114 @@ namespace WPFProjektv1.Properties {
         public static string MainWindow_Label_PleaseWat_Loaded {
             get {
                 return ResourceManager.GetString("MainWindow.Label_PleaseWat_Loaded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have to chose both teams.
+        /// </summary>
+        public static string MainWindow_TeamsNotChosenMessage {
+            get {
+                return ResourceManager.GetString("MainWindow.TeamsNotChosenMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AWAY TEAM.
+        /// </summary>
+        public static string MatchWindow_LabelAwayTeam {
+            get {
+                return ResourceManager.GetString("MatchWindow_LabelAwayTeam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Played games:.
+        /// </summary>
+        public static string MatchWindow_LabelAwayTeamNumberOfMatches {
+            get {
+                return ResourceManager.GetString("MatchWindow_LabelAwayTeamNumberOfMatches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Goal difference:.
+        /// </summary>
+        public static string MatchWindow_LabelGoalDifference {
+            get {
+                return ResourceManager.GetString("MatchWindow_LabelGoalDifference", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Goals received:.
+        /// </summary>
+        public static string MatchWindow_LabelGoalsReceived {
+            get {
+                return ResourceManager.GetString("MatchWindow_LabelGoalsReceived", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Goals scored:.
+        /// </summary>
+        public static string MatchWindow_LabelGoalsScored {
+            get {
+                return ResourceManager.GetString("MatchWindow_LabelGoalsScored", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HOME TEAM.
+        /// </summary>
+        public static string MatchWindow_LabelHomeTeam {
+            get {
+                return ResourceManager.GetString("MatchWindow_LabelHomeTeam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Goal diference:.
+        /// </summary>
+        public static string MatchWindow_LabelHomeTeamGoalDifference {
+            get {
+                return ResourceManager.GetString("MatchWindow_LabelHomeTeamGoalDifference", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Played games:.
+        /// </summary>
+        public static string MatchWindow_LabelHomeTeamNumberOfMatches {
+            get {
+                return ResourceManager.GetString("MatchWindow_LabelHomeTeamNumberOfMatches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loses:.
+        /// </summary>
+        public static string MatchWindow_LabelLoses {
+            get {
+                return ResourceManager.GetString("MatchWindow_LabelLoses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wins:.
+        /// </summary>
+        public static string MatchWindow_LabelWins {
+            get {
+                return ResourceManager.GetString("MatchWindow_LabelWins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Draw:.
+        /// </summary>
+        public static string MatchWindows_LabelDraw {
+            get {
+                return ResourceManager.GetString("MatchWindows_LabelDraw", resourceCulture);
             }
         }
     }

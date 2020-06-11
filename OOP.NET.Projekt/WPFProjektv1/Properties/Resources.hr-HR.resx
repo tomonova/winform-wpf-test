@@ -120,13 +120,55 @@
   <data name="MainWaindow.Label_PleaseWait" xml:space="preserve">
     <value>Strpi se...</value>
   </data>
+  <data name="MainWindow.Closing" xml:space="preserve">
+    <value>Jesi siguran da želiš izaći?</value>
+  </data>
   <data name="MainWindow.Label_AwayTeam" xml:space="preserve">
-    <value>Gostujuća ekipa</value>
+    <value>Protivnička ekipa</value>
   </data>
   <data name="MainWindow.Label_HomeTeam" xml:space="preserve">
-    <value>Domaća ekipa</value>
+    <value>Izabrana ekipa</value>
   </data>
   <data name="MainWindow.Label_PleaseWat_Loaded" xml:space="preserve">
     <value>Izaberi momčadi i pritisnu loptu</value>
+  </data>
+  <data name="MainWindow.TeamsNotChosenMessage" xml:space="preserve">
+    <value>Moraš izabrati obje momčadi</value>
+  </data>
+  <data name="MainWindow_Btton_Exit" xml:space="preserve">
+    <value>Izlaz</value>
+  </data>
+  <data name="MatchWindows_LabelDraw" xml:space="preserve">
+    <value>Neodlučeno:</value>
+  </data>
+  <data name="MatchWindow_LabelAwayTeam" xml:space="preserve">
+    <value>GOSTI</value>
+  </data>
+  <data name="MatchWindow_LabelAwayTeamNumberOfMatches" xml:space="preserve">
+    <value>Broj utakmica:</value>
+  </data>
+  <data name="MatchWindow_LabelGoalDifference" xml:space="preserve">
+    <value>Razlika golova:</value>
+  </data>
+  <data name="MatchWindow_LabelGoalsReceived" xml:space="preserve">
+    <value>Primljeni golovi:</value>
+  </data>
+  <data name="MatchWindow_LabelGoalsScored" xml:space="preserve">
+    <value>Postignuti golovi:</value>
+  </data>
+  <data name="MatchWindow_LabelHomeTeam" xml:space="preserve">
+    <value>DOMAĆI</value>
+  </data>
+  <data name="MatchWindow_LabelHomeTeamGoalDifference" xml:space="preserve">
+    <value>Razlika golova:</value>
+  </data>
+  <data name="MatchWindow_LabelHomeTeamNumberOfMatches" xml:space="preserve">
+    <value>Broj utakmica:</value>
+  </data>
+  <data name="MatchWindow_LabelLoses" xml:space="preserve">
+    <value>Porazi:</value>
+  </data>
+  <data name="MatchWindow_LabelWins" xml:space="preserve">
+    <value>Pobjede:</value>
   </data>
 </root>

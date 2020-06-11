@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:WPFProjektv1"
         xmlns:resx="clr-namespace:WPFProjektv1.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="580" Width="820" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Initialized="Window_Initialized">
+        Title="MainWindow" Height="580" Width="820" MinWidth="615" MinHeight="435" 
+        WindowStartupLocation="CenterScreen" 
+        Loaded="Window_Loaded" ResizeMode="NoResize" WindowStyle="None" x:Name="mainWindow">
     <Window.Resources>
         <Style TargetType="ComboBox">
             <Setter Property="Background" Value="White" />
@@ -31,8 +33,8 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="60" />
-            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="45" />
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
@@ -59,33 +61,43 @@
                     Click="btnEng_Click">
                 <Image Source="/Images/ENG.png" Stretch="Fill"/>
             </Button>
+            <Button Grid.Column="0" Width="80" Height="35" VerticalAlignment="top" HorizontalAlignment="Left" Margin="10,10,10,0" Click="Button_Click_1">
+                820 x 580
+            </Button>
+            <Button Grid.Column="0" Width="80" Height="35" VerticalAlignment="top" HorizontalAlignment="Left" Margin="100,10,10,0" Click="Button_Click_2">
+                1024 x 768
+            </Button>
+            <Button Grid.Column="0" Width="80" Height="35" VerticalAlignment="top" HorizontalAlignment="Left" Margin="190,10,10,0" Click="Button_Click_3">
+                FULLSCREEN
+            </Button>
         </Grid>
         <Grid Grid.Row="1" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="410*" />
+                <ColumnDefinition Width="207*" />
+                <ColumnDefinition Width="204*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Content="{x:Static resx:Resources.MainWindow_Label_HomeTeam}" 
                    Foreground="White" 
                    FontSize="22"
                    Margin="50,7,10,0"/>
-            <ComboBox Grid.Column="0" x:Name="cmbHomeTeam" Margin="50" SelectionChanged="cmbHomeTeam_SelectionChanged"  />
-            <Label Grid.Column="1" 
+            <ComboBox Grid.Column="0" x:Name="cmbHomeTeam" Margin="70,40" SelectionChanged="cmbHomeTeam_SelectionChanged"  />
+            <Label Grid.Column="2" 
                    Content="{x:Static resx:Resources.MainWindow_Label_AwayTeam}" 
                    Foreground="White" 
                    FontSize="22" 
                    Margin="0,7,50,0" 
                    HorizontalAlignment="Right"/>
-            <ComboBox Grid.Column="1" x:Name="cmbAwayTeam" Margin="50" />
+            <ComboBox Grid.Column="1" x:Name="cmbAwayTeam" Margin="70,40" Grid.ColumnSpan="2" />
         </Grid>
         <Grid Grid.Row="2" Grid.ColumnSpan="2">
             <Label Content="{x:Static resx:Resources.MainWaindow_Label_PleaseWait}" x:Name="lblPleaseWait" Foreground="White" 
                    HorizontalAlignment="Center"
                    VerticalAlignment="Bottom"
-                   FontSize="15"/>
+                   FontSize="20" FontWeight="Bold"/>
         </Grid>
-        <Grid Grid.Row="3" Grid.ColumnSpan="2">
-            <Button Width="50" Height="50" RenderTransformOrigin="0.5,0.5">
+        <Grid Grid.Row="3" Grid.ColumnSpan="2" x:Name="lowerGrid">
+            <Button Width="50" Height="50" RenderTransformOrigin="0.5,0.5" Click="Button_Click" x:Name="btnBall">
                 <Button.RenderTransform>
                     <RotateTransform x:Name="MyAnimatedTransform" Angle="0" />
                 </Button.RenderTransform>
@@ -99,7 +111,7 @@
                     </ControlTemplate>
                 </Button.Template>
                 <Button.Triggers>
-                    <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger RoutedEvent="Button.PreviewStylusDown">
                         <BeginStoryboard>
                             <Storyboard x:Name="btnStory">
                                 <DoubleAnimation
@@ -112,5 +124,10 @@
                 </Button.Triggers>
             </Button>
         </Grid>
+        <Button Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right"
+                Margin="30,7" x:Name="btnExit" Background="White" FontSize="15" Padding="10,0" FontWeight="Bold"
+                Content="{x:Static resx:Resources.MainWindow_Btton_Exit}" Click="btnExit_Click" IsCancel="True">
+
+        </Button>
     </Grid>
 </Window>
