@@ -139,7 +139,7 @@
     <value>Izlaz</value>
   </data>
   <data name="MatchWindows_LabelDraw" xml:space="preserve">
-    <value>Neodlučeno:</value>
+    <value>Neodlučenih utakmica:</value>
   </data>
   <data name="MatchWindow_LabelAwayTeam" xml:space="preserve">
     <value>GOSTI</value>
@@ -166,9 +166,27 @@
     <value>Broj utakmica:</value>
   </data>
   <data name="MatchWindow_LabelLoses" xml:space="preserve">
-    <value>Porazi:</value>
+    <value>Pobjeđenih utakmica:</value>
   </data>
   <data name="MatchWindow_LabelWins" xml:space="preserve">
-    <value>Pobjede:</value>
+    <value>Izgubljenih utakmica:</value>
+  </data>
+  <data name="PlayerStat_lblGamesPlayed" xml:space="preserve">
+    <value>Odigrane utakmice:</value>
+  </data>
+  <data name="PlayerStat_lblGoalsScored" xml:space="preserve">
+    <value>Golovi:</value>
+  </data>
+  <data name="PlayerStat_lblName" xml:space="preserve">
+    <value>Ime:</value>
+  </data>
+  <data name="PlayerStat_lblPosition" xml:space="preserve">
+    <value>Pozicija:</value>
+  </data>
+  <data name="PlayerStat_lblRedCard" xml:space="preserve">
+    <value>Crveni kartoni:</value>
+  </data>
+  <data name="PlayerStat_lblYellowCard" xml:space="preserve">
+    <value>Žuti kartoni:</value>
   </data>
 </root>

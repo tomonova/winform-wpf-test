@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFProjektv1"
         xmlns:resx="clr-namespace:WPFProjektv1.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="580" Width="820" MinWidth="615" MinHeight="435" 
+        Title="MainWindow" Height="768" Width="1024" MinWidth="1024" MinHeight="768" 
         WindowStartupLocation="CenterScreen" 
         Loaded="Window_Loaded" ResizeMode="NoResize" WindowStyle="None" x:Name="mainWindow">
     <Window.Resources>
@@ -62,10 +62,10 @@
                 <Image Source="/Images/ENG.png" Stretch="Fill"/>
             </Button>
             <Button Grid.Column="0" Width="80" Height="35" VerticalAlignment="top" HorizontalAlignment="Left" Margin="10,10,10,0" Click="Button_Click_1">
-                820 x 580
+                1024 x 768
             </Button>
             <Button Grid.Column="0" Width="80" Height="35" VerticalAlignment="top" HorizontalAlignment="Left" Margin="100,10,10,0" Click="Button_Click_2">
-                1024 x 768
+                1440 x 900
             </Button>
             <Button Grid.Column="0" Width="80" Height="35" VerticalAlignment="top" HorizontalAlignment="Left" Margin="190,10,10,0" Click="Button_Click_3">
                 FULLSCREEN

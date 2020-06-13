@@ -6,7 +6,6 @@ using System.Resources;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 using Repo.DAL;
 using Repo.Models;
 using WPFProjektv1.Properties;
@@ -26,7 +25,7 @@ namespace WPFProjektv1
         private string chosenTeam;
         private HashSet<Team> chosenTeams;
         ResourceManager rm;
-        string size = "minimum";
+        private string size = "minimum";
 
 
         public MainWindow()
@@ -189,7 +188,7 @@ namespace WPFProjektv1
                 return;
             }
             string chosenOpponent = cmbAwayTeam.SelectedItem.ToString().Split().Last();
-            MatchWindow mw = new MatchWindow(matches, chosenTeam, chosenOpponent);
+            MatchWindow mw = new MatchWindow(matches, chosenTeam, chosenOpponent,size);
             mw.Show();
         }
 
@@ -201,16 +200,16 @@ namespace WPFProjektv1
         private void setMinimum()
         {
             mainWindow.WindowState = WindowState.Normal;
-            mainWindow.Width = 835;
-            mainWindow.Height = 575;
-            btnBall.Width = 50;
-            btnBall.Height = 50;
+            mainWindow.Width = 1024;
+            mainWindow.Height = 768;
+            btnBall.Width = 65;
+            btnBall.Height = 65;
             btnCro.Width = 40;
             btnCro.Height = 36;
             btnEng.Width = 40;
             btnEng.Height = 35;
             btnEng.Margin = new Thickness(0, 10, 70, 0);
-            string size = "minimum";
+            size = "minimum";
             CenterWindowOnScreen();
             AppSave.ScreenSave(size);
         }
@@ -223,16 +222,17 @@ namespace WPFProjektv1
         private void setMedium()
         {
             mainWindow.WindowState = WindowState.Normal;
-            mainWindow.Width = 1024;
-            mainWindow.Height = 768;
-            btnBall.Width = 75;
-            btnBall.Height = 75;
+            mainWindow.Width = 1440;
+            mainWindow.Height = 900;
+            btnBall.Width = 83;
+            btnBall.Height = 83;
             btnCro.Width = 70;
             btnCro.Height = 62;
             btnEng.Width = 70;
             btnEng.Height = 62;
             btnEng.Margin = new Thickness(0, 10, 115, 0);
-            string size = "medium"; CenterWindowOnScreen();
+            size = "medium"; 
+            CenterWindowOnScreen();
             AppSave.ScreenSave(size);
         }
 
@@ -251,7 +251,7 @@ namespace WPFProjektv1
             btnEng.Width = 95;
             btnEng.Height = 85;
             btnEng.Margin = new Thickness(0, 10, 180, 0);
-            string size = "fullscreen";
+            size = "fullscreen";
             AppSave.ScreenSave(size);
         }
 

@@ -83,6 +83,12 @@
     <Compile Include="MatchWindow.xaml.cs">
       <DependentUpon>MatchWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PlayerInfo.xaml.cs">
+      <DependentUpon>PlayerInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerUC.xaml.cs">
+      <DependentUpon>PlayerUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.en-US.Designer.cs">
       <DependentUpon>Resources.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -110,6 +116,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MatchWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayerInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayerUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -166,6 +180,46 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\soccer_field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ARG.png" />
+    <Resource Include="Images\AUS.png" />
+    <Resource Include="Images\BEL.png" />
+    <Resource Include="Images\BRA.png" />
+    <Resource Include="Images\COL.png" />
+    <Resource Include="Images\CRC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DEN.png" />
+    <Resource Include="Images\EGY.png" />
+    <Resource Include="Images\ESP.png" />
+    <Resource Include="Images\footballer-silhouette-1.png" />
+    <Resource Include="Images\FRA.png" />
+    <Resource Include="Images\GER.png" />
+    <Resource Include="Images\IRN.png" />
+    <Resource Include="Images\ISL.png" />
+    <Resource Include="Images\JPN.png" />
+    <Resource Include="Images\KOR.png" />
+    <Resource Include="Images\KSA.png" />
+    <Resource Include="Images\MAR.png" />
+    <Resource Include="Images\MEX.png" />
+    <Resource Include="Images\NGA.png" />
+    <Resource Include="Images\PAN.png" />
+    <Resource Include="Images\PER.png" />
+    <Resource Include="Images\POL.png" />
+    <Resource Include="Images\POR.png" />
+    <Resource Include="Images\RUS.png" />
+    <Resource Include="Images\SEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SRB.png" />
+    <Resource Include="Images\SUI.png" />
+    <Resource Include="Images\SWE.png" />
+    <Resource Include="Images\TUN.png" />
+    <Resource Include="Images\URU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\soccer_ball_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

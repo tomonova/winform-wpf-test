@@ -11,7 +11,7 @@ namespace Repo.DAL
 {
     class FileRepo : IRepo
     {
-        private string _Path = @"D:\Tomo\Documents\OOP.NET\Projekt\Matches.json";
+        private string _Path = @"C:\Users\TomoNova\source\repos\OOP.NET\OOP.NET.Projekt\matches.json";
         public List<Match> GetMatches()
         {
             using (StreamReader sr = new StreamReader(_Path))

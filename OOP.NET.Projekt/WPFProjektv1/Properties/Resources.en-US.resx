@@ -139,7 +139,7 @@
     <value>Exit</value>
   </data>
   <data name="MatchWindows_LabelDraw" xml:space="preserve">
-    <value>Draw:</value>
+    <value>Games draw:</value>
   </data>
   <data name="MatchWindow_LabelAwayTeam" xml:space="preserve">
     <value>AWAY TEAM</value>
@@ -166,9 +166,27 @@
     <value>Played games:</value>
   </data>
   <data name="MatchWindow_LabelLoses" xml:space="preserve">
-    <value>Loses:</value>
+    <value>Games lost:</value>
   </data>
   <data name="MatchWindow_LabelWins" xml:space="preserve">
-    <value>Wins:</value>
+    <value>Games won:</value>
+  </data>
+  <data name="PlayerStat_lblGamesPlayed" xml:space="preserve">
+    <value>Games played:</value>
+  </data>
+  <data name="PlayerStat_lblGoalsScored" xml:space="preserve">
+    <value>Goals:</value>
+  </data>
+  <data name="PlayerStat_lblName" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="PlayerStat_lblPosition" xml:space="preserve">
+    <value>Position: </value>
+  </data>
+  <data name="PlayerStat_lblRedCard" xml:space="preserve">
+    <value>Red Cards:</value>
+  </data>
+  <data name="PlayerStat_lblYellowCard" xml:space="preserve">
+    <value>Yellow cards:</value>
   </data>
 </root>

@@ -1,4 +1,4 @@
-﻿<Window x:Name="Match" x:Class="WPFProjektv1.MatchWindow"
+﻿<Window x:Name="matchWindow" x:Class="WPFProjektv1.MatchWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,7 +7,8 @@
         xmlns:resx="clr-namespace:WPFProjektv1.Properties"
         mc:Ignorable="d"
         Title="MatchWindow" Height="768" Width="1024"
-        AllowsTransparency="False" WindowStyle="None">
+        AllowsTransparency="False" WindowStyle="SingleBorderWindow" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" Loaded="Match_Loaded">
     <Window.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>
@@ -38,30 +39,42 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" FontWeight="Bold" Content="{x:Static resx:Resources.MatchWindow_LabelHomeTeam}" HorizontalAlignment="Center" />
-            <Label Grid.Column="1" FontWeight="Bold" Content="{x:Static resx:Resources.MatchWindow_LabelAwayTeam}" HorizontalAlignment="Center" />
+            <Label Grid.Column="0" FontWeight="Bold" Content="{x:Static resx:Resources.MatchWindow_LabelHomeTeam}" FontSize="15" HorizontalAlignment="Center" />
+            <Label Grid.Column="1" FontWeight="Bold" Content="{x:Static resx:Resources.MatchWindow_LabelAwayTeam}" FontSize="15" HorizontalAlignment="Center" />
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" x:Name="lblHomeCountry" HorizontalAlignment="Center" />
-            <Label Grid.Column="1" Content="{x:Static resx:Resources.MatchWindow_LabelHomeTeamNumberOfMatches}"/>
-            <Label Grid.Column="2" x:Name="lblHomeTeamMatches" />
-            <Label Grid.Column="5" Content="{x:Static resx:Resources.MatchWindow_LabelAwayTeamNumberOfMatches}"/>
-            <Label Grid.Column="6" x:Name="lblAwayTeamMatches"/>
-            <Label Grid.Column="4" x:Name="lblAwayCountry"/>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Image x:Name="imgHome" Margin="2" HorizontalAlignment="Right"/>
+                <Label  x:Name="lblHomeCountry" HorizontalAlignment="Center" FontWeight="Bold" FontSize="15"/>
+            </StackPanel>
+            
+            <Label Grid.Column="2" Content="{x:Static resx:Resources.MatchWindow_LabelHomeTeamNumberOfMatches}"/>
+            <Label Grid.Column="3" x:Name="lblHomeTeamMatches" />
+            <StackPanel Grid.Column="5" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Image x:Name="imgAway"  />
+                <Label  x:Name="lblAwayCountry" HorizontalAlignment="Center" FontWeight="Bold" FontSize="15"/>
+            </StackPanel>
+            
+            <Label Grid.Column="6" Content="{x:Static resx:Resources.MatchWindow_LabelAwayTeamNumberOfMatches}"/>
+            <Label Grid.Column="7" x:Name="lblAwayTeamMatches" HorizontalAlignment="Right"/>
+            
         </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
@@ -73,22 +86,25 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Content="{x:Static resx:Resources.MatchWindow_LabelWins}" />
-            <Label Grid.Column="1" x:Name="lblHomeTeamWins" />
-            <Label Grid.Column="2" Content="{x:Static resx:Resources.MatchWindow_LabelLoses}" />
-            <Label Grid.Column="3" x:Name="lblHomeTeamLoses" />
-            <Label Grid.Column="4" Content="{x:Static resx:Resources.MatchWindows_LabelDraw}" />
-            <Label Grid.Column="5" x:Name="lblHomeTeamDraw" />
-            <Label Grid.Column="7" Content="{x:Static resx:Resources.MatchWindow_LabelWins}" />
-            <Label Grid.Column="8" x:Name="lblAwayTeamWins" />
-            <Label Grid.Column="9" Content="{x:Static resx:Resources.MatchWindow_LabelLoses}" />
-            <Label Grid.Column="10" x:Name="lblAwayTeamLoses" />
-            <Label Grid.Column="11" Content="{x:Static resx:Resources.MatchWindows_LabelDraw}" />
-            <Label Grid.Column="12" x:Name="lblAwayTeamDraw" />
+            <Label Grid.Column="1" Content="{x:Static resx:Resources.MatchWindow_LabelWins}"  />
+            <Label Grid.Column="2" x:Name="lblHomeTeamWins" />
+            <Label Grid.Column="3" Content="{x:Static resx:Resources.MatchWindow_LabelLoses}" />
+            <Label Grid.Column="4" x:Name="lblHomeTeamLoses" />
+            <Label Grid.Column="5" Content="{x:Static resx:Resources.MatchWindows_LabelDraw}" />
+            <Label Grid.Column="6" x:Name="lblHomeTeamDraw" />
+            <Label Grid.Column="8" Content="{x:Static resx:Resources.MatchWindow_LabelWins}" />
+            <Label Grid.Column="9" x:Name="lblAwayTeamWins" />
+            <Label Grid.Column="10" Content="{x:Static resx:Resources.MatchWindow_LabelLoses}" />
+            <Label Grid.Column="11" x:Name="lblAwayTeamLoses" />
+            <Label Grid.Column="12" Content="{x:Static resx:Resources.MatchWindows_LabelDraw}" />
+            <Label Grid.Column="13" x:Name="lblAwayTeamDraw" />
         </Grid>
         <Grid x:Name="Stats2" Grid.Row="3">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
@@ -102,26 +118,62 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Content="{x:Static resx:Resources.MatchWindow_LabelGoalsScored}" />
-            <Label Grid.Column="1" x:Name="lblHomeTeamScored" />
-            <Label Grid.Column="2" Content="{x:Static resx:Resources.MatchWindow_LabelGoalsReceived}" />
-            <Label Grid.Column="3" x:Name="lblHomeTeamReceived" />
-            <Label Grid.Column="4" Content="{x:Static resx:Resources.MatchWindow_LabelGoalDifference}" />
-            <Label Grid.Column="5" x:Name="lblHomeTeamDifference" />
-            <Label Grid.Column="7" Content="{x:Static resx:Resources.MatchWindow_LabelGoalsScored}" />
-            <Label Grid.Column="8" x:Name="lblAwayTeamScored" />
-            <Label Grid.Column="9" Content="{x:Static resx:Resources.MatchWindow_LabelGoalsReceived}" />
-            <Label Grid.Column="10" x:Name="lblAwayTeamReceived" />
-            <Label Grid.Column="11" Content="{x:Static resx:Resources.MatchWindow_LabelGoalDifference}" />
-            <Label Grid.Column="12" x:Name="lblAwayTeamDifference" />
+            <Label Grid.Column="1" Content="{x:Static resx:Resources.MatchWindow_LabelGoalsScored}" />
+            <Label Grid.Column="2" x:Name="lblHomeTeamScored" />
+            <Label Grid.Column="3" Content="{x:Static resx:Resources.MatchWindow_LabelGoalsReceived}" />
+            <Label Grid.Column="4" x:Name="lblHomeTeamReceived" />
+            <Label Grid.Column="5" Content="{x:Static resx:Resources.MatchWindow_LabelGoalDifference}" />
+            <Label Grid.Column="6" x:Name="lblHomeTeamDifference" />
+            <Label Grid.Column="8" Content="{x:Static resx:Resources.MatchWindow_LabelGoalsScored}" />
+            <Label Grid.Column="9" x:Name="lblAwayTeamScored" />
+            <Label Grid.Column="10" Content="{x:Static resx:Resources.MatchWindow_LabelGoalsReceived}" />
+            <Label Grid.Column="11" x:Name="lblAwayTeamReceived" />
+            <Label Grid.Column="12" Content="{x:Static resx:Resources.MatchWindow_LabelGoalDifference}" />
+            <Label Grid.Column="13" x:Name="lblAwayTeamDifference" />
         </Grid>
-        <Grid x:Name="Field" Grid.Row="4">
+        <Grid x:Name="Field" Grid.Row="4" >
             <Grid.Background>
                 <ImageBrush ImageSource="/Images/soccer_field.png" />
 
             </Grid.Background>
-
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" x:Name="HomeGoalie" VerticalAlignment="Center" />
+            <StackPanel Grid.Column="1" x:Name="HomeDefense" VerticalAlignment="Center"  />
+            <StackPanel Grid.Column="2" x:Name="HomeMidfield" VerticalAlignment="Center" />
+            <StackPanel Grid.Column="3" x:Name="HomeForward" VerticalAlignment="Center"  />
+            <StackPanel Grid.Column="8" x:Name="AwayGoalie" VerticalAlignment="Center" />
+            <StackPanel Grid.Column="7" x:Name="AwayDefense" VerticalAlignment="Center" />
+            <StackPanel Grid.Column="6" x:Name="AwayMidfield" VerticalAlignment="Center" />
+            <StackPanel Grid.Column="5" x:Name="AwayForward" VerticalAlignment="Center" />
+            <Image Grid.Column="4" Source="/Images/soccer_ball_white.png" Width="55" Height="55" RenderTransformOrigin=".5,.5">
+                <Image.RenderTransform>
+                    <RotateTransform x:Name="MyAnimatedTransform" Angle="0" />
+                </Image.RenderTransform>
+                <Image.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard x:Name="btnStory">
+                                <DoubleAnimation
+                Storyboard.TargetName="MyAnimatedTransform"
+                Storyboard.TargetProperty="(RotateTransform.Angle)"
+                From="0.0" To="360" Duration="0:0:0.8" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Image.Triggers>
+            </Image>
         </Grid>
     </Grid>
 </Window>

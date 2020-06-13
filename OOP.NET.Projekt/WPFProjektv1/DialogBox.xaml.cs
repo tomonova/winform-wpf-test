@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace WPFProjektv1
 {
-    /// <summary>
-    /// Interaction logic for DialogBox.xaml
-    /// </summary>
     public partial class DialogBox : Window
     {
         public DialogBox()

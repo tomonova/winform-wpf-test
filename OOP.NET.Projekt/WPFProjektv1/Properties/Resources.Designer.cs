@@ -196,7 +196,7 @@ namespace WPFProjektv1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Loses:.
+        ///   Looks up a localized string similar to Games lost:.
         /// </summary>
         public static string MatchWindow_LabelLoses {
             get {
@@ -205,7 +205,7 @@ namespace WPFProjektv1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wins:.
+        ///   Looks up a localized string similar to Games won:.
         /// </summary>
         public static string MatchWindow_LabelWins {
             get {
@@ -214,11 +214,65 @@ namespace WPFProjektv1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Draw:.
+        ///   Looks up a localized string similar to Games Draw:.
         /// </summary>
         public static string MatchWindows_LabelDraw {
             get {
                 return ResourceManager.GetString("MatchWindows_LabelDraw", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Games played:.
+        /// </summary>
+        public static string PlayerStat_lblGamesPlayed {
+            get {
+                return ResourceManager.GetString("PlayerStat_lblGamesPlayed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Goals:.
+        /// </summary>
+        public static string PlayerStat_lblGoalsScored {
+            get {
+                return ResourceManager.GetString("PlayerStat_lblGoalsScored", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name:.
+        /// </summary>
+        public static string PlayerStat_lblName {
+            get {
+                return ResourceManager.GetString("PlayerStat_lblName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Position: .
+        /// </summary>
+        public static string PlayerStat_lblPosition {
+            get {
+                return ResourceManager.GetString("PlayerStat_lblPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Red Cards:.
+        /// </summary>
+        public static string PlayerStat_lblRedCard {
+            get {
+                return ResourceManager.GetString("PlayerStat_lblRedCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yellow cards:.
+        /// </summary>
+        public static string PlayerStat_lblYellowCard {
+            get {
+                return ResourceManager.GetString("PlayerStat_lblYellowCard", resourceCulture);
             }
         }
     }

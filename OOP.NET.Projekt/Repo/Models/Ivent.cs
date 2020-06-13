@@ -18,5 +18,13 @@ namespace Repo.Models
             this.type_of_event = type_of_event;
             this.player = player;
         }
+        public Ivent(string player, string type_of_event,string time)
+        {
+            this.type_of_event = type_of_event;
+            this.player = player;
+            this.time = time;
+        }
+        public override string ToString() => $"{player} {type_of_event}";
+        public override int GetHashCode() => type_of_event.GetHashCode() ^ player.GetHashCode() ^ time.GetHashCode();
     }
 }

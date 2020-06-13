@@ -1,0 +1,53 @@
+﻿<Window x:Class="WPFProjektv1.PlayerInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFProjektv1"
+                     xmlns:resx="clr-namespace:WPFProjektv1.Properties"
+        mc:Ignorable="d"
+        Title="PlayerInfo" Height="140" Width="260" WindowStyle="None" 
+        Background="#FFD6C2C2" BorderThickness="0" AllowsTransparency="True" WindowStartupLocation="CenterScreen">
+    <Window.Style>
+        <Style>
+            <Setter Property="Label.FontSize" Value="13" />
+            <Setter Property="Label.Margin" Value="3,0" />
+        </Style>
+    </Window.Style>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard Name="FormFade">
+                    <DoubleAnimation Name="FormFadeAnimation"
+                                     Storyboard.TargetProperty="(Window.Opacity)"
+                                     From="0.0" To="1.0" Duration="0:0:0.5"
+                                     AutoReverse="False" RepeatBehavior="1x" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <StackPanel Orientation="Vertical">
+        <Label x:Name="lblCaptain" Foreground="White" Visibility="Collapsed" FontWeight="Bold" Content="CAPTAIN"/>
+        <DockPanel >
+            <Label Content="{x:Static resx:Resources.PlayerStat_lblName}"  FontSize="16"/>
+            <Label x:Name="lblName" Content="tetis testis testis" FontSize="16" />
+            <Label x:Name="lblNumber" FontWeight="Bold" Foreground="White" FontSize="16" Content="54" HorizontalAlignment="Right" Margin="4,0"/>
+        </DockPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label  Content="{x:Static resx:Resources.PlayerStat_lblPosition}" />
+            <Label x:Name="lblPosition" Content="test"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label  Content="{x:Static resx:Resources.PlayerStat_lblGoalsScored}" />
+            <Label x:Name="lblGoalsScored" Content="test"/>
+        </StackPanel>
+        <!--<StackPanel Orientation="Horizontal">
+            <Label  Content="{x:Static resx:Resources.PlayerStat_lblGamesPlayed}" />
+            <Label x:Name="lblGamesPlayed" Content="3"/>
+        </StackPanel>-->
+            <StackPanel Orientation="Horizontal">
+            <Label  Content="{x:Static resx:Resources.PlayerStat_lblYellowCard}" />
+            <Label x:Name="lblYellow" Content="3" Foreground="Yellow"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
