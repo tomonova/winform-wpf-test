@@ -6,13 +6,13 @@
              xmlns:local="clr-namespace:WPFProjektv1"
              mc:Ignorable="d" 
              d:DesignHeight="80" d:DesignWidth="70" Background="Transparent" Margin="5,10"
-             MouseEnter="UserControl_MouseEnter" MouseLeave="UserControl_MouseLeave">
+             MouseEnter="UserControl_MouseEnter">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <!--<RowDefinition Height="*" />-->
         </Grid.RowDefinitions>
-        <Image x:Name="imgPlayer" Source="/Images/footballer-silhouette-1.png" Width="80" Height="70"/>
+        <Image x:Name="imgPlayer" Source="/Images/footballer-silhouette-1.png" Width="80" Height="70" Stretch="Fill"/>
         <!--<Label Grid.Row="1" x:Name="lblNumber" FontSize="20" FontWeight="Bold" Foreground="White" Content="11" HorizontalAlignment="Center" VerticalAlignment="Top"/>-->
     </Grid>
 </UserControl>

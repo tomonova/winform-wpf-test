@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFProjektv1"
         xmlns:resx="clr-namespace:WPFProjektv1.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="768" Width="1024" MinWidth="1024" MinHeight="768" 
+        Title="World Cup 2018" Height="768" Width="1024" MinWidth="1024" MinHeight="768" 
         WindowStartupLocation="CenterScreen" 
         Loaded="Window_Loaded" ResizeMode="NoResize" WindowStyle="None" x:Name="mainWindow">
     <Window.Resources>
@@ -73,22 +73,21 @@
         </Grid>
         <Grid Grid.Row="1" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="410*" />
-                <ColumnDefinition Width="207*" />
-                <ColumnDefinition Width="204*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="AUto" />
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Content="{x:Static resx:Resources.MainWindow_Label_HomeTeam}" 
                    Foreground="White" 
                    FontSize="22"
-                   Margin="50,7,10,0"/>
-            <ComboBox Grid.Column="0" x:Name="cmbHomeTeam" Margin="70,40" SelectionChanged="cmbHomeTeam_SelectionChanged"  />
+                    HorizontalAlignment="Center"/>
+            <ComboBox Grid.Column="0" x:Name="cmbHomeTeam" Margin="70,40" SelectionChanged="cmbHomeTeam_SelectionChanged"  SelectedValuePath="Content"/>
             <Label Grid.Column="2" 
                    Content="{x:Static resx:Resources.MainWindow_Label_AwayTeam}" 
                    Foreground="White" 
-                   FontSize="22" 
-                   Margin="0,7,50,0" 
-                   HorizontalAlignment="Right"/>
-            <ComboBox Grid.Column="1" x:Name="cmbAwayTeam" Margin="70,40" Grid.ColumnSpan="2" />
+                   FontSize="22"  
+                   HorizontalAlignment="Center"/>
+            <ComboBox Grid.Column="2" x:Name="cmbAwayTeam" Margin="70,40" Grid.ColumnSpan="2" />
         </Grid>
         <Grid Grid.Row="2" Grid.ColumnSpan="2">
             <Label Content="{x:Static resx:Resources.MainWaindow_Label_PleaseWait}" x:Name="lblPleaseWait" Foreground="White" 

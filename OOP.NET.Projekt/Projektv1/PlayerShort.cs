@@ -92,6 +92,10 @@ namespace Projektv1
             {
                 picBoxPlayer.Image = Resources.footballer_silhouette_1;
             }
+            else
+            {
+                picBoxPlayer.Image = Image.FromFile(PicturPath);
+            }
         }
         internal void StarOnOFF()
         {

@@ -14,19 +14,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace WPFProjektv1
 {
     public partial class PlayerUC : UserControl
     {
         public Player Player { get; set; }
-        PlayerInfo pf;
+        PlayerInfo PI;
         Window matchWindow; 
-        public PlayerUC(Player player)
+        public PlayerUC(Player player, MatchWindow matchWindow)
         {
             InitializeComponent();
             Player = player;
-            matchWindow = Window.GetWindow(this);
+            this.matchWindow = matchWindow;
             Configure();
         }
 
@@ -41,13 +42,45 @@ namespace WPFProjektv1
 
         private void UserControl_MouseEnter(object sender, MouseEventArgs e)
         {
-            pf = new PlayerInfo(Player);
-            pf.Show();
+            CloseActiveInfos();
+            PI = new PlayerInfo(Player);
+
+            Point relativePoint = this.TransformToAncestor(matchWindow).Transform(new Point(0, 0));
+            Point location = new Point(0, 0);
+
+            if (relativePoint.X <= matchWindow.ActualWidth / 2 && relativePoint.Y <= matchWindow.ActualHeight / 2)
+            {
+                location = this.PointToScreen(new Point(0, 0));
+            }
+
+            else if (relativePoint.X > matchWindow.ActualWidth / 2 && relativePoint.Y < matchWindow.ActualHeight / 2)
+            {
+                location = this.PointToScreen(new Point(this.ActualWidth - this.Width, 0));
+            }
+            else if (relativePoint.X < matchWindow.ActualWidth / 2 && relativePoint.Y > matchWindow.ActualHeight / 2)
+            {
+                location = this.PointToScreen(new Point(0, this.ActualHeight - this.Height));
+            }
+            else if (relativePoint.X > matchWindow.ActualWidth / 2 && relativePoint.Y > matchWindow.ActualHeight / 2)
+            {
+                location = this.PointToScreen(new Point(this.ActualWidth - this.Width, this.ActualHeight - this.Height));
+            }
+
+            PI.Left = location.X;
+            PI.Top = location.Y;
+            PI.Show();
         }
 
-        private void UserControl_MouseLeave(object sender, MouseEventArgs e)
+        private void CloseActiveInfos()
         {
-            pf.Close();
+            foreach (Window window in System.Windows.Application.Current.Windows)
+            {
+                if (window.Title == "Player Info")
+                {
+                    window.Close();
+                }
+
+            };
         }
     }
 }

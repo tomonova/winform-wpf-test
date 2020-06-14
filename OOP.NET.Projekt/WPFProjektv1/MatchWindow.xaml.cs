@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Principal;
 using System.Text;
@@ -35,12 +36,13 @@ namespace WPFProjektv1
         private int awayTeamWins { get; set; }
         private int awayTeamLoses { get; set; }
         private int awayTeamDraws { get; set; }
+        private Team savedTeam { get; set; }
         private string size;
         public MatchWindow()
         {
             InitializeComponent();
         }
-        public MatchWindow(List<Match> matches, string chosenTeam, string chosenOpponent,string size)
+        public MatchWindow(List<Match> matches, string chosenTeam, string chosenOpponent, string size, Team savedTeam)
         {
             this.size = size;
             homePlayers = new List<Player>();
@@ -50,6 +52,7 @@ namespace WPFProjektv1
             Matches = matches;
             ChosenTeam = chosenTeam;
             ChosenOpponent = chosenOpponent;
+            this.savedTeam= savedTeam;
         }
         private void Match_Loaded(object sender, RoutedEventArgs e)
         {
@@ -99,9 +102,47 @@ namespace WPFProjektv1
 
         private void positionTeams()
         {
+            if (savedTeam.code==ChosenTeam|| savedTeam.code==ChosenOpponent)
+            {
+                if (savedTeam.code == ChosenTeam)
+                {
+                    foreach (var player in homePlayers)
+                    {
+                        foreach (var savedPlayer in savedTeam.Players)
+                        {
+                            if (savedPlayer.Name == player.Name && File.Exists(savedPlayer.ProfilePic))
+                            {
+                                player.ProfilePic = savedPlayer.ProfilePic;
+                            }
+                        }
+                    }
+                }
+                else if (savedTeam.code == ChosenOpponent)
+                {
+                    foreach (var player in awayPlayers)
+                    {
+                        foreach (var savedPlayer in savedTeam.Players)
+                        {
+                            if (savedPlayer.Name == player.Name && File.Exists(savedPlayer.ProfilePic))
+                            {
+                                player.ProfilePic = savedPlayer.ProfilePic;
+                            }
+                        }
+                    }
+                }
+                goThroughTeams();
+            }
+            else
+            {
+                goThroughTeams();
+            }
+        }
+
+        private void goThroughTeams()
+        {
             foreach (Player player in homePlayers)
             {
-                PlayerUC pUC = new PlayerUC(player);
+                PlayerUC pUC = new PlayerUC(player, this);
                 setSize(pUC);
                 if (player.position == Player.Position.Midfield)
                 {
@@ -115,14 +156,14 @@ namespace WPFProjektv1
                 {
                     HomeForward.Children.Add(pUC);
                 }
-                else if(player.position == Player.Position.Goalie)
+                else if (player.position == Player.Position.Goalie)
                 {
                     HomeGoalie.Children.Add(pUC);
                 }
             }
             foreach (Player player in awayPlayers)
             {
-                PlayerUC pUC = new PlayerUC(player);
+                PlayerUC pUC = new PlayerUC(player, this);
                 setSize(pUC);
                 if (player.position == Player.Position.Midfield)
                 {

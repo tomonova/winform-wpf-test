@@ -11,6 +11,7 @@ namespace Repo.DAL
 {
     public class AppSave
     {
+        private static readonly string _path= "../../../SaveFiles/";
         private static readonly string _sizeFile = "size.properties";
         private static readonly string _languageFile = "language.properties";
         private static readonly string _teamSave = "SavedTeam.json";
@@ -19,7 +20,11 @@ namespace Repo.DAL
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter(_languageFile))
+                if (!Directory.Exists(_path))
+                {
+                    Directory.CreateDirectory(_path);
+                }
+                using (StreamWriter sw = new StreamWriter(_path+_languageFile))
                 {
                     sw.Write(language);
                 }
@@ -33,11 +38,11 @@ namespace Repo.DAL
         public static string LanguageConfLoad()
         {
             string language;
-            if (File.Exists(_languageFile))
+            if (File.Exists(_path + _languageFile))
             {
                 try
                 {
-                    using (StreamReader sr = new StreamReader(_languageFile))
+                    using (StreamReader sr = new StreamReader(_path + _languageFile))
                     {
                         language = sr.ReadLine();
                     }
@@ -65,7 +70,11 @@ namespace Repo.DAL
             serializer = new JsonSerializer();
             try
             {
-                using (StreamWriter sw = new StreamWriter(_teamSave, false))
+                if (!Directory.Exists(_path))
+                {
+                    Directory.CreateDirectory(_path);
+                }
+                using (StreamWriter sw = new StreamWriter(_path + _teamSave, false))
                 {
                     sw.Write("");
                     using (JsonWriter writer = new JsonTextWriter(sw))
@@ -74,7 +83,6 @@ namespace Repo.DAL
                         serializer.Serialize(writer, teamSave);
                     }
                 }
-
             }
             catch (Exception ex)
             {
@@ -90,9 +98,9 @@ namespace Repo.DAL
             try
             {
                 string savedGameFromJson;
-                if (File.Exists(_teamSave))
+                if (File.Exists(_path + _teamSave))
                 {
-                    using (StreamReader sw = new StreamReader(_teamSave))
+                    using (StreamReader sw = new StreamReader(_path + _teamSave))
                     {
                         savedGameFromJson = sw.ReadToEnd();
                     }
@@ -115,7 +123,11 @@ namespace Repo.DAL
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter(_sizeFile))
+                if (!Directory.Exists(_path))
+                {
+                    Directory.CreateDirectory(_path);
+                }
+                using (StreamWriter sw = new StreamWriter(_path + _sizeFile))
                 {
                     sw.Write(size);
                 }
@@ -129,11 +141,11 @@ namespace Repo.DAL
         public static string SizeConfLoad()
         {
             string size;
-            if (File.Exists(_sizeFile))
+            if (File.Exists(_path+_sizeFile))
             {
                 try
                 {
-                    using (StreamReader sr = new StreamReader(_sizeFile))
+                    using (StreamReader sr = new StreamReader(_path + _sizeFile))
                     {
                         size = sr.ReadLine();
                     }

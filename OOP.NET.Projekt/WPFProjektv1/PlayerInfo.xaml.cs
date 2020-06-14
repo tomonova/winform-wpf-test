@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace WPFProjektv1
 {
@@ -23,6 +24,11 @@ namespace WPFProjektv1
             InitializeComponent();
             Player = player;
             FillInfo();
+            StartCloseTimer();
+        }
+
+        public PlayerInfo()
+        {
         }
 
         private void FillInfo()
@@ -37,6 +43,21 @@ namespace WPFProjektv1
             {
                 lblCaptain.Visibility = Visibility.Visible;
             }
+        }
+        private void StartCloseTimer()
+        {
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(5d);
+            timer.Tick += TimerTick;
+            timer.Start();
+        }
+
+        private void TimerTick(object sender, EventArgs e)
+        {
+            DispatcherTimer timer = (DispatcherTimer)sender;
+            timer.Stop();
+            timer.Tick -= TimerTick;
+            Close();
         }
     }
 }

@@ -26,6 +26,7 @@ namespace WPFProjektv1
         private HashSet<Team> chosenTeams;
         ResourceManager rm;
         private string size = "minimum";
+        private Team savedTeam;
 
 
         public MainWindow()
@@ -39,24 +40,46 @@ namespace WPFProjektv1
         {
             Culture = "hr-HR";
             App.ChangeCulture(new CultureInfo(Culture));
-            AppSave.LanguageConfSave(Culture);
+            try
+            {
+                AppSave.LanguageConfSave(Culture);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnEng_Click(object sender, RoutedEventArgs e)
         {
             Culture = "en-US";
             App.ChangeCulture(new CultureInfo(Culture));
-            AppSave.LanguageConfSave(Culture);
+            try
+            {
+                AppSave.LanguageConfSave(Culture);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            size = AppSave.SizeConfLoad();
+            try
+            {
+                size = AppSave.SizeConfLoad();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
             SetSize(size);
             PokreniAnimaciju();
             await DataLoad();
-        }
 
+        }
         private void SetSize(string size)
         {
             switch (size)
@@ -105,7 +128,8 @@ namespace WPFProjektv1
                 timovi.Add(tim_home);
                 timovi.Add(tim_away);
             }
-            foreach (var tim in timovi)
+            List<Team> timoviList  = timovi.OrderBy(t => t.code).ToList();
+            foreach (var tim in timoviList)
             {
                 cmbHomeTeam.Items.Add(tim);
             }
@@ -117,6 +141,7 @@ namespace WPFProjektv1
 
             btnStory.Stop();
             lblPleaseWait.Content = rm.GetString("MainWindow.Label_PleaseWat_Loaded");
+            CheckSave();
         }
 
         private List<Match> GetMatches()
@@ -125,22 +150,38 @@ namespace WPFProjektv1
             List<Match> matches = RF.GetMatches();
             return matches;
         }
+        private void CheckSave()
+        {
+            savedTeam = AppSave.TeamLoad();
+            if ( savedTeam !=null && savedTeam.code != "none")
+            {
+                int index = 0;
+                foreach (var item in cmbHomeTeam.Items)
+                {
+                    if (item.ToString() == savedTeam.ToString())
+                    {
+                        cmbHomeTeam.SelectedIndex = index;
+                    }
+                    index++;
+                }
+            }
+        }
 
         private void cmbHomeTeam_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            MatchSetting();
+        }
+
+        private void MatchSetting()
+        {
             selectedTeam = (Team)cmbHomeTeam.SelectedItem;
-            removeEntriesOpponent();
+            cmbAwayTeam.Items.Clear();
             FindOpponents(selectedTeam);
         }
-
-        private void removeEntriesOpponent()
-        {
-            cmbAwayTeam.Items.Clear();
-        }
-
         private void FindOpponents(Team selectedTeam)
         {
-            chosenTeam = cmbHomeTeam.SelectedValue.ToString().Split().Last();
+            
+            chosenTeam = selectedTeam.ToString().Split().Last();
             FindAwayTeams(chosenTeam);
         }
 
@@ -188,7 +229,7 @@ namespace WPFProjektv1
                 return;
             }
             string chosenOpponent = cmbAwayTeam.SelectedItem.ToString().Split().Last();
-            MatchWindow mw = new MatchWindow(matches, chosenTeam, chosenOpponent,size);
+            MatchWindow mw = new MatchWindow(matches, chosenTeam, chosenOpponent,size,savedTeam);
             mw.Show();
         }
 
@@ -211,7 +252,14 @@ namespace WPFProjektv1
             btnEng.Margin = new Thickness(0, 10, 70, 0);
             size = "minimum";
             CenterWindowOnScreen();
-            AppSave.ScreenSave(size);
+            try
+            {
+                AppSave.ScreenSave(size);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -233,7 +281,14 @@ namespace WPFProjektv1
             btnEng.Margin = new Thickness(0, 10, 115, 0);
             size = "medium"; 
             CenterWindowOnScreen();
-            AppSave.ScreenSave(size);
+            try
+            {
+                AppSave.ScreenSave(size);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -252,7 +307,15 @@ namespace WPFProjektv1
             btnEng.Height = 85;
             btnEng.Margin = new Thickness(0, 10, 180, 0);
             size = "fullscreen";
-            AppSave.ScreenSave(size);
+            try
+            {
+                AppSave.ScreenSave(size);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void CenterWindowOnScreen()

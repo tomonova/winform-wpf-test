@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFProjektv1"
         xmlns:resx="clr-namespace:WPFProjektv1.Properties"
         mc:Ignorable="d"
-        Title="MatchWindow" Height="768" Width="1024"
+        Title="Match Window" Height="768" Width="1024"
         AllowsTransparency="False" WindowStyle="SingleBorderWindow" ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen" Loaded="Match_Loaded">
     <Window.Triggers>

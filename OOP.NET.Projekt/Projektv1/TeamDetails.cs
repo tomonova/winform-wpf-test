@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,10 +69,17 @@ namespace Projektv1
             savedTeam.Players.Clear(); 
             foreach (PlayerShort item in flpFavorites.Controls)
             {
-                Player testniplayer = new Player(Country, Code, item.PlayerName, item.Favorite, item.PicturPath);
-                savedTeam.Players.Add(testniplayer);
-                savedTeam.country = testniplayer.country;
-                savedTeam.code = testniplayer.code;
+                Player savedPlayer = new Player(Country, Code, item.PlayerName, item.Favorite, item.PicturPath);
+                savedTeam.Players.Add(savedPlayer);
+                savedTeam.country = savedPlayer.country;
+                savedTeam.code = savedPlayer.code;
+            }
+            foreach (PlayerShort item in flpTeam.Controls)
+            {
+                Player savedPlayer = new Player(Country, Code, item.PlayerName, item.Favorite, item.PicturPath);
+                savedTeam.Players.Add(savedPlayer);
+                savedTeam.country = savedPlayer.country;
+                savedTeam.code = savedPlayer.code;
             }
             try
             {
@@ -88,24 +96,38 @@ namespace Projektv1
         {
             foreach (var player in playersList)
             {
-                PlayerShort ps = new PlayerShort(player.Name,player.Captain,player.ShirtNumber,player.position,player.Favorite);
-                ps.MouseDown += Ps_MouseDown;
-                ps.Favoriziranje += OnFavoriziranje;
-                if (savedTeam.Players!=null)
+                if (savedTeam.Players.Count>22 && savedTeam.code==this.Code)
                 {
                     foreach (Player savedPlayer in savedTeam.Players)
                     {
-                        if (savedPlayer.Name == ps.PlayerName)
+                        if (player.Name == savedPlayer.Name)
                         {
-                            ps.Favorite = true;
+                            PlayerShort psSaved = new PlayerShort(player.Name, player.Captain, player.ShirtNumber, player.position, player.Favorite);
+                            psSaved.MouseDown += Ps_MouseDown;
+                            psSaved.Favoriziranje += OnFavoriziranje;
+                            if (savedPlayer.Favorite == true)
+                            {
+                                psSaved.Favorite = true;
+                            }
+                            if (savedPlayer.ProfilePic != "default" && File.Exists(savedPlayer.ProfilePic))
+                            {
+                                psSaved.PicturPath = savedPlayer.ProfilePic;
+                            }
+                            if (psSaved.Favorite)
+                                flpFavorites.Controls.Add(psSaved);
+                            else
+                            {
+                                flpTeam.Controls.Add(psSaved);
+                            }
                         }
                     } 
                 }
-                if (ps.Favorite)
-                    flpFavorites.Controls.Add(ps);
                 else
                 {
-                    flpTeam.Controls.Add(ps);
+                PlayerShort ps = new PlayerShort(player.Name,player.Captain,player.ShirtNumber,player.position,player.Favorite);
+                ps.MouseDown += Ps_MouseDown;
+                ps.Favoriziranje += OnFavoriziranje;
+                flpTeam.Controls.Add(ps);
                 }
             }
         }

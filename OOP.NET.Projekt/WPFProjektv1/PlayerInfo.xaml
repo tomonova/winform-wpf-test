@@ -3,15 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPFProjektv1"
-                     xmlns:resx="clr-namespace:WPFProjektv1.Properties"
+        xmlns:resx="clr-namespace:WPFProjektv1.Properties"
         mc:Ignorable="d"
-        Title="PlayerInfo" Height="140" Width="260" WindowStyle="None" 
-        Background="#FFD6C2C2" BorderThickness="0" AllowsTransparency="True" WindowStartupLocation="CenterScreen">
+        Title="Player Info" Height="140" Width="270" WindowStyle="None" 
+        Background="#FFD6C2C2" BorderThickness="0" AllowsTransparency="True" x:Name="playerInfo">
     <Window.Style>
         <Style>
             <Setter Property="Label.FontSize" Value="13" />
-            <Setter Property="Label.Margin" Value="3,0" />
+            <Setter Property="Label.Margin" Value="2,0" />
         </Style>
     </Window.Style>
     <Window.Triggers>
@@ -20,7 +19,7 @@
                 <Storyboard Name="FormFade">
                     <DoubleAnimation Name="FormFadeAnimation"
                                      Storyboard.TargetProperty="(Window.Opacity)"
-                                     From="0.0" To="1.0" Duration="0:0:0.5"
+                                     From="0.0" To="1.0" Duration="0:0:0.6"
                                      AutoReverse="False" RepeatBehavior="1x" />
                 </Storyboard>
             </BeginStoryboard>
