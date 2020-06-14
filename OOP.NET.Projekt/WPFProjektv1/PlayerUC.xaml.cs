@@ -22,7 +22,9 @@ namespace WPFProjektv1
     {
         public Player Player { get; set; }
         PlayerInfo PI;
-        Window matchWindow; 
+        Window matchWindow;
+        private readonly int _playerInfoWidth = 270;
+        private readonly int _playerInfoHeight = 140;
         public PlayerUC(Player player, MatchWindow matchWindow)
         {
             InitializeComponent();
@@ -55,15 +57,15 @@ namespace WPFProjektv1
 
             else if (relativePoint.X > matchWindow.ActualWidth / 2 && relativePoint.Y < matchWindow.ActualHeight / 2)
             {
-                location = this.PointToScreen(new Point(this.ActualWidth - this.Width, 0));
+                location = this.PointToScreen(new Point(this.ActualWidth - _playerInfoWidth, 0));
             }
             else if (relativePoint.X < matchWindow.ActualWidth / 2 && relativePoint.Y > matchWindow.ActualHeight / 2)
             {
-                location = this.PointToScreen(new Point(0, this.ActualHeight - this.Height));
+                location = this.PointToScreen(new Point(0, this.ActualHeight - _playerInfoHeight));
             }
             else if (relativePoint.X > matchWindow.ActualWidth / 2 && relativePoint.Y > matchWindow.ActualHeight / 2)
             {
-                location = this.PointToScreen(new Point(this.ActualWidth - this.Width, this.ActualHeight - this.Height));
+                location = this.PointToScreen(new Point(this.ActualWidth - _playerInfoWidth, this.ActualHeight - _playerInfoHeight));
             }
 
             PI.Left = location.X;
