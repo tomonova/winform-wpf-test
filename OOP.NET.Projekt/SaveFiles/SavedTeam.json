@@ -1,50 +1,36 @@
 {
-  "country": "Russia",
+  "country": "Croatia",
   "Players": [
     {
-      "Name": "Igor AKINFEEV",
+      "Name": "Sime VRSALJKO",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
       "Favorite": true,
-      "ProfilePic": "C:\\Users\\TomoNova\\Pictures\\erv.jpg",
+      "ProfilePic": "C:\\Users\\TomoNova\\source\\repos\\OOP.NET\\OOP.NET.Projekt\\Projektv1\\bin\\Debug\\Vrsaljko.jpg",
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "MARIO FERNANDES",
+      "Name": "Andrej KRAMARIC",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
-      "Favorite": false,
-      "ProfilePic": "C:\\Users\\TomoNova\\Pictures\\soccer_ball.png",
+      "Favorite": true,
+      "ProfilePic": "C:\\Users\\TomoNova\\source\\repos\\OOP.NET\\OOP.NET.Projekt\\Projektv1\\bin\\Debug\\Kramaric.jpg",
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Ilya KUTEPOV",
-      "Captain": false,
-      "ShirtNumber": 0,
-      "position": 0,
-      "Favorite": false,
-      "ProfilePic": "default",
-      "GamesPlayed": 0,
-      "Goals": 0,
-      "YellowCards": 0,
-      "country": "Russia",
-      "Players": null,
-      "code": "RUS"
-    },
-    {
-      "Name": "Sergey IGNASHEVICH",
+      "Name": "Dominik LIVAKOVIC",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -53,12 +39,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Andrey SEMENOV",
+      "Name": "Ivan STRINIC",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -67,12 +53,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Denis CHERYSHEV",
+      "Name": "Ivan PERISIC",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -81,12 +67,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Daler KUZIAEV",
+      "Name": "Vedran CORLUKA",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -95,12 +81,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Iury GAZINSKY",
+      "Name": "Dejan LOVREN",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -109,12 +95,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Alan DZAGOEV",
+      "Name": "Ivan RAKITIC",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -123,12 +109,40 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Fedor SMOLOV",
+      "Name": "Mateo KOVACIC",
+      "Captain": false,
+      "ShirtNumber": 0,
+      "position": 0,
+      "Favorite": false,
+      "ProfilePic": "C:\\Users\\TomoNova\\source\\repos\\OOP.NET\\OOP.NET.Projekt\\Projektv1\\bin\\Debug\\Kovacic.jpg",
+      "GamesPlayed": 0,
+      "Goals": 0,
+      "YellowCards": 0,
+      "country": "Croatia",
+      "Players": null,
+      "code": "CRO"
+    },
+    {
+      "Name": "Luka MODRIC",
+      "Captain": false,
+      "ShirtNumber": 0,
+      "position": 0,
+      "Favorite": false,
+      "ProfilePic": "C:\\Users\\TomoNova\\source\\repos\\OOP.NET\\OOP.NET.Projekt\\Projektv1\\bin\\Debug\\Modrić.jpg",
+      "GamesPlayed": 0,
+      "Goals": 0,
+      "YellowCards": 0,
+      "country": "Croatia",
+      "Players": null,
+      "code": "CRO"
+    },
+    {
+      "Name": "Marcelo BROZOVIC",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -137,12 +151,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Roman ZOBNIN",
+      "Name": "Lovre KALINIC",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -151,12 +165,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Andrei LUNEV",
+      "Name": "Tin JEDVAJ",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -165,12 +179,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Fedor KUDRIASHOV",
+      "Name": "Filip BRADARIC",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -179,12 +193,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Vladimir GRANAT",
+      "Name": "Duje CALETA-CAR",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -193,12 +207,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Alexey MIRANCHUK",
+      "Name": "Nikola KALINIC",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -207,12 +221,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Anton MIRANCHUK",
+      "Name": "Mario MANDZUKIC",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -221,12 +235,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Aleksandr GOLOVIN",
+      "Name": "Ante REBIC",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -235,12 +249,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Yury ZHIRKOV",
+      "Name": "Milan BADELJ",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -249,12 +263,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Alexander SAMEDOV",
+      "Name": "Marko PJACA",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -263,12 +277,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Vladimir GABULOV",
+      "Name": "Domagoj VIDA",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -277,12 +291,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Aleksandr EROKHIN",
+      "Name": "Josip PIVARIC",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -291,12 +305,12 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     },
     {
-      "Name": "Artem DZYUBA",
+      "Name": "Danijel SUBASIC",
       "Captain": false,
       "ShirtNumber": 0,
       "position": 0,
@@ -305,24 +319,10 @@
       "GamesPlayed": 0,
       "Goals": 0,
       "YellowCards": 0,
-      "country": "Russia",
+      "country": "Croatia",
       "Players": null,
-      "code": "RUS"
-    },
-    {
-      "Name": "Igor SMOLNIKOV",
-      "Captain": false,
-      "ShirtNumber": 0,
-      "position": 0,
-      "Favorite": false,
-      "ProfilePic": "default",
-      "GamesPlayed": 0,
-      "Goals": 0,
-      "YellowCards": 0,
-      "country": "Russia",
-      "Players": null,
-      "code": "RUS"
+      "code": "CRO"
     }
   ],
-  "code": "RUS"
+  "code": "CRO"
 }

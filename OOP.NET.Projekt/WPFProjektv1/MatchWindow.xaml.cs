@@ -104,7 +104,7 @@ namespace WPFProjektv1
         {
             if (savedTeam.code==ChosenTeam|| savedTeam.code==ChosenOpponent)
             {
-                if (savedTeam.code == ChosenTeam)
+                if (savedTeam.code == homePlayers[0].code)
                 {
                     foreach (var player in homePlayers)
                     {
@@ -117,7 +117,7 @@ namespace WPFProjektv1
                         }
                     }
                 }
-                else if (savedTeam.code == ChosenOpponent)
+                else if (savedTeam.code == awayPlayers[0].code)
                 {
                     foreach (var player in awayPlayers)
                     {
@@ -219,7 +219,8 @@ namespace WPFProjektv1
                         Name = item.name,
                         Captain = item.captain,
                         position = dohvatiPozicju(item.position),
-                        ShirtNumber = item.shirt_number
+                        ShirtNumber = item.shirt_number,
+                        code=ChosenMatch.home_team.code
                     });
                 }
             }
@@ -232,7 +233,8 @@ namespace WPFProjektv1
                         Name = item.name,
                         Captain = item.captain,
                         position = dohvatiPozicju(item.position),
-                        ShirtNumber = item.shirt_number
+                        ShirtNumber = item.shirt_number,
+                        code=ChosenMatch.away_team.code
                     });
                 }
             }
