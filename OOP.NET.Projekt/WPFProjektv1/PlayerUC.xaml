@@ -5,14 +5,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPFProjektv1"
              mc:Ignorable="d" 
-             d:DesignHeight="80" d:DesignWidth="70" Background="Transparent" Margin="5,10"
+             d:DesignHeight="90" d:DesignWidth="70" Margin="5,10"
              MouseEnter="UserControl_MouseEnter">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <!--<RowDefinition Height="*" />-->
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Image x:Name="imgPlayer" Source="/Images/footballer-silhouette-1.png" Width="80" Height="70" Stretch="Fill"/>
-        <!--<Label Grid.Row="1" x:Name="lblNumber" FontSize="20" FontWeight="Bold" Foreground="White" Content="11" HorizontalAlignment="Center" VerticalAlignment="Top"/>-->
+        <Image Grid.Row="0" x:Name="imgPlayer" Source="/Images/footballer-silhouette-1.png" Width="80" Height="70" Stretch="Fill"/>
+        <!--<Label Grid.Row="1" x:Name="lblName" FontSize="20" FontWeight="Bold" Foreground="White" Content="TEST"  HorizontalAlignment="Center" VerticalAlignment="Bottom"/>-->
+        <StackPanel Grid.Row="1">
+            <Label Content="test" VerticalAlignment="Bottom" HorizontalAlignment="Center" x:Name="lblName" FontSize="10" Foreground="White"></Label>
+        </StackPanel>
     </Grid>
 </UserControl>

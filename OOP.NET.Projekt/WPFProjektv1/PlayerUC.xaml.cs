@@ -40,6 +40,7 @@ namespace WPFProjektv1
             {
                 imgPlayer.Source = new BitmapImage(new Uri(Player.ProfilePic));
             }
+            lblName.Content = Player.Name;
         }
 
         private void UserControl_MouseEnter(object sender, MouseEventArgs e)

@@ -190,14 +190,14 @@ namespace WPFProjektv1
             {
                 case "medium":
                     pUC.Width = 85;
-                    pUC.Height = 95;
+                    pUC.Height = 115;
                     pUC.imgPlayer.Width = 85;
                     pUC.imgPlayer.Height = 95;
                     pUC.Margin = new Thickness(5, 15, 5, 15);
                     break;
                 case "fullscreen":
                     pUC.Width = 105;
-                    pUC.Height = 115;
+                    pUC.Height = 145;
                     pUC.imgPlayer.Width = 110;
                     pUC.imgPlayer.Height = 120;
                     pUC.Margin = new Thickness(5, 25, 5, 25);

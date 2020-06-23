@@ -8,7 +8,7 @@ namespace Repo.DAL
 {
     public class RepoFactory
     {
-        public static IRepo GetRepo() => new FileRepo();
-        //public static IRepo GetRepo() => new WebRepo();
+        //public static IRepo GetRepo() => new FileRepo();
+        public static IRepo GetRepo() => new WebRepo();
     }
 }
